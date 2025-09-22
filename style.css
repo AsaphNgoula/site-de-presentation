@@ -248,14 +248,15 @@ nav a:active:{
 .premierca{
     display: grid;
     grid-template-columns: 200px 200px;
-    gap: 115px;
+    gap: 100px;
     margin-bottom:20px;    
 }
 
 .deuxiemeca{
     display: grid;
     grid-template-columns: 200px 200px;
-    gap: 115px;
+    gap: 100px;
+    margin-top: -20px;
     
 }
 .employes{
@@ -322,5 +323,16 @@ nav a:active:{
 }
 
 .neuf{
+    position: relative;
+    top: -25px;
+}
 
+.reg{
+    position: relative;
+    top: -25px;
+}
+
+.ye{
+    position: relative;
+    top: -25px;
 }
