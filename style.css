@@ -112,6 +112,7 @@ nav a:active:{
 .table{
     display: table;
     margin: 5px auto;
+    
 }
 
 
@@ -172,6 +173,7 @@ nav a:active:{
     background-size: cover;
     background-position: center;
     z-index: 1;
+    align-content: center;
 }
 
    .text-camtel {
@@ -481,9 +483,13 @@ nav a:active:{
 }
 
 .foo{
-    background-color: #3aa0e5;
+    background-color: rgba(16, 117, 184, 0.895);
     display: flex;
-    justify-content: ;
+    justify-content: space-around;
+    height: 350px;
+    position: relative;
+    top:200px;
+    align-content: center;
 }
 
 .fin{
@@ -494,6 +500,7 @@ nav a:active:{
     height: 50px;
     position: relative;
     bottom: -4px;
+    top: 200px;
     font-size: 12px;
 }
 
@@ -501,23 +508,107 @@ span{
     color: #3aa0e5;
 }
 footer{
-    width: 1551px;
-
+    width: 1550px;
 }
 
 .abfin{
     width: 300px;
     height: 20px;
     position: relative;
-    right: -80px;
+    right: -150px;
+    top: 150px;
 }
 
 .ac{
     color: white;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .chb{
     color: #ddd;
     font-size: 14px;
 }
+
+.tablee{
+    display: table;
+   
+     color: #ddd;
+    font-size: 14px;
+}
+
+.cc{
+    width: 300px;
+    height: 20px;
+    position: relative;
+    right: -150px;
+    top: 150px;
+}
+
+.qui{
+    color: white;
+    font-weight: 400;   
+}
+
+.con{
+    width: 300px;
+    height: 20px;
+    position: relative;
+    right: -150px;
+    top: 150px;
+}
+
+.nt{
+    color: white;
+    font-weight: 400; 
+}
+
+.cn{
+     display: table;
+     color: #ddd;
+    font-size: 14px;
+}
+
+li{
+     list-style-type: none;
+}
+
+.logpng{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    right: -750px;
+    top: 300px;
+    z-index: 4;
+}
+
+.followtext{
+    color: white;
+    position: relative;
+    top: 150px;
+}
+
+
+.hero{
+  display:flex;
+  width:100%;
+  height:400px;              /* ajuste la hauteur */
+}
+
+/* bloc gauche : fond bleu + découpe biaisée côté droit */
+.left{
+  flex:1;
+  background:#0090e0;
+  color:#fff;
+  padding:2rem;
+  position:relative;
+  overflow:hidden;
+}
+.left::after{
+  content:"";
+  position:absolute;
+  top:0; right:0; bottom:0;
+  width:80px;                /* largeur de la bande blanche */
+  background:#fff;
+  clip-path:polygon(0 0,100% 15%,100% 85%,0 100%);
+}
+
