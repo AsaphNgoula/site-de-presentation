@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/*logo de camtel*/
+.logo_camtel{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-left:100px;
+}
+
+/*barre de recherche camtel*/
+.search-bar{
+    padding: 10px;
+    width: 700px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: hwb(0 95% 5%);
+}
+
