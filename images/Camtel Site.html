@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="7q3CO1MT9VO4OFXvkrH23oUYqtCdaycj3A5s5ddC">
+
+    <title>Camtel Site</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://camtel.cm/favicons/favicone-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://camtel.cm/favicons/favicone-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://camtel.cm/favicons/favicone-48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://camtel.cm/favicons/favicone-64.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://camtel.cm/favicons/favicone-96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://camtel.cm/favicons/favicone-128.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="https://camtel.cm/favicons/favicone-180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://camtel.cm/favicons/favicone-192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="https://camtel.cm/favicons/favicone-256.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://camtel.cm/favicons/favicone-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://camtel.cm/favicons/favicone-180.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net/">
+    <link href="Camtel%20Site_fichiers/css.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Camtel%20Site_fichiers/all.min.css">
+
+    <!-- Scripts -->
+    <link rel="preload" as="style" href="Camtel%20Site_fichiers/app-BVRuNusw.css"><link rel="modulepreload" as="script" href="Camtel%20Site_fichiers/app-T1DpEqax.js"><link rel="stylesheet" href="Camtel%20Site_fichiers/app-BVRuNusw.css" data-navigate-track="reload"><script type="module" src="Camtel%20Site_fichiers/app-T1DpEqax.js" data-navigate-track="reload"></script>
+    <!-- Livewire Styles -->
+    <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+
+    <!-- Alpine.js is bundled with Livewire v3; avoid double-including to prevent conflicts -->
+    
+    
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="Camtel%20Site_fichiers/swiper-bundle.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="Camtel%20Site_fichiers/aos.css" rel="stylesheet">
+    <script src="Camtel%20Site_fichiers/aos.js"></script>
+
+    <script src="Camtel%20Site_fichiers/flowbite.min.js"></script>
+
+    <!-- Additional Mobile Responsiveness CSS -->
+    <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        .hero-buttons {
+            width: 100%;
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+        .carousel-image2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+
+    <style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style></head>
+<body class="font-sans antialiased bg-gray-50 overflow-x-hidden" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-delay="0">
+    <div class="min-h-screen flex flex-col">
+        <div class="w-full border-b border-gray-100 py-3 shadow-sm sm:bg-white hidden lg:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 lg:px-8">
+        <!-- Logo -->
+        <a href="https://camtel.cm/" class="flex items-center flex-shrink-0">
+            <img src="Camtel%20Site_fichiers/logo.png" alt="Camtel" class="w-12 h-12 sm:w-16 sm:h-16 p-1">
+        </a>
+        
+        <!-- Search - Hidden on mobile, shown on desktop -->
+        <div class="flex flex-1 justify-center max-w-3xl mx-8">
+            <form action="https://camtel.cm/search" method="GET" class="w-full max-w-2xl">
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400 group-focus-within:text-primary transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+                        </svg>
+                    </div>
+                    <input type="search" name="q" placeholder="Search products, services, news..." autocomplete="off" class="w-full pl-12 pr-4 py-3.5 rounded-2xl text-gray-900 bg-gray-50 border-2 border-gray-200 placeholder-gray-500 focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-md" required="">
+                </div>
+            </form>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="flex items-center space-x-2 sm:space-x-4">
+            <!-- Live Chat -->
+            <button onclick="Livewire.dispatch('open-chatbot')" class="group relative bg-primary text-white px-2 py-2 sm:px-4 sm:py-3 rounded-xl transition-all duration-300 shadow-lg hover:border-white hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20">
+                <div class="flex items-center space-x-1 sm:space-x-2">
+                    <div class="relative">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        <!-- <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div> -->
+                    </div>
+                    <span class="hidden sm:inline text-sm font-semibold">Live Chat</span>
+                </div>
+            </button>
+            
+            <!-- Agencies -->
+            <a href="https://camtel.cm/agencies" class="group bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-700 px-2 py-2 sm:px-4 sm:py-3 rounded-xl hover:-translate-y-0.5">
+                <div class="flex items-center space-x-1 sm:space-x-2">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                    </svg>
+                    <span class="hidden sm:inline text-sm font-semibold">Our Agencies</span>
+                </div>
+            </a>
+            
+            <!-- Language Switcher -->
+            <div class="relative z-[9999]">
+                <!-- Desktop Language Switcher -->
+    <div x-data="{ open: false }" class="relative relative">
+        <button @click="open = !open" class="group bg-white hover:bg-gray-50 text-gray-700 hover:text-primary px-2 py-1 transition-all duration-300  transform hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/20">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg"></span>
+                <span class="text-sm font-semibold">EN</span>
+                <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </div>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95 translate-y-2" x-transition:enter-end="transform opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="transform opacity-100 scale-100 translate-y-0" x-transition:leave-end="transform opacity-0 scale-95 translate-y-2" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50 backdrop-blur-sm" style="display: none;">
+                            <a href="https://camtel.cm/language/en" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-all duration-200 first:rounded-t-xl last:rounded-b-xl bg-primary/10 text-primary font-semibold">
+                    <span class="text-lg mr-3"></span>
+                    <span class="font-medium">English</span>
+                                            <svg class="w-4 h-4 ml-auto text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                                    </a>
+                            <a href="https://camtel.cm/language/fr" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-all duration-200 first:rounded-t-xl last:rounded-b-xl ">
+                    <span class="text-lg mr-3"></span>
+                    <span class="font-medium">Français</span>
+                                    </a>
+                    </div>
+    </div>
+             </div>
+        </div>
+    </div>
+</div> <nav x-data="{ isOpen: false, megaMenuOpen: false, megaMenu: null, hasMegaMenu: false }" class="bg-white dark:bg-white shadow-lg w-full relative z-50 border-b border-gray-200 sticky top-0">
+    <div class="mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
+        <!-- Mobile Header with Hamburger Menu -->
+        <div class="lg:hidden flex items-center justify-between h-16 border-b border-gray-200">
+            <!-- Mobile Logo -->
+            <div class="flex items-center">
+                <a href="https://camtel.cm/" class="flex-shrink-0">
+                    <img src="Camtel%20Site_fichiers/logo.png" alt="Camtel" class="w-10 h-10">
+                </a>
+            </div>
+            
+            <!-- Mobile hamburger menu button -->
+            
+            <div class="flex items-center">
+                <!-- Mobile Language Switcher -->
+    <div class="px-3 py-2 border-t border-gray-200">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                                    <a href="https://camtel.cm/language/en" class="flex items-center px-3 py-2 rounded-lg transition-colors duration-200 bg-primary text-white">
+                        <span class="text-sm font-medium">EN</span>
+                    </a>
+                                    <a href="https://camtel.cm/language/fr" class="flex items-center px-3 py-2 rounded-lg transition-colors duration-200 text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                        <span class="text-sm font-medium">FR</span>
+                    </a>
+                            </div>
+        </div>
+    </div>
+                 <button @click="isOpen = !isOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Hamburger icon -->
+                    <svg x-show="!isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <!-- Close icon -->
+                    <svg x-show="isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Nav Row - Desktop -->
+        <div class="hidden lg:flex justify-center border-t border-b border-gray-200 py-2 bg-white">
+            <div class="flex space-x-8">
+                <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 bg-primary/10 text-primary hover:bg-primary/20">
+        
+        <span class="flex-1">Home</span>
+
+        
+            </a>
+</div>
+
+
+
+    <div x-data="{ show: false }" class="relative" @mouseenter="if (window.innerWidth &gt;= 1024) { megaMenuOpen = true; megaMenu = 'about'; hasMegaMenu = true }" @mouseleave="if (window.innerWidth &gt;= 1024) { setTimeout(() =&gt; { if (!hasMegaMenu) megaMenuOpen = false }, 100) }">
+    <a href="https://camtel.cm/about" @click="if (window.innerWidth &gt;= 1024) { megaMenuOpen = !megaMenuOpen; megaMenu = 'about'; hasMegaMenu = true; }" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">About Us</span>
+
+        
+                    <svg class="hidden lg:inline-block ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            </a>
+</div>
+
+
+
+    <div x-data="{ show: false }" class="relative" @mouseenter="if (window.innerWidth &gt;= 1024) { megaMenuOpen = true; megaMenu = 'services'; hasMegaMenu = true }" @mouseleave="if (window.innerWidth &gt;= 1024) { setTimeout(() =&gt; { if (!hasMegaMenu) megaMenuOpen = false }, 100) }">
+    <a href="https://camtel.cm/services" @click="if (window.innerWidth &gt;= 1024) { megaMenuOpen = !megaMenuOpen; megaMenu = 'services'; hasMegaMenu = true; }" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">Our Services</span>
+
+        
+                    <svg class="hidden lg:inline-block ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            </a>
+</div>
+
+
+
+    <!--
+    <div x-data="{ show: false }" class="relative" 
+    @mouseenter="if (window.innerWidth &gt;= 1024) { megaMenuOpen = true; megaMenu = &#039;blue-shop&#039;; hasMegaMenu = true }"
+    @mouseleave="if (window.innerWidth &gt;= 1024) { setTimeout(() =&gt; { if (!hasMegaMenu) megaMenuOpen = false }, 100) }"
+>
+    <a href="https://camtel.cm/blue-shop" 
+        @click="if (window.innerWidth >= 1024) { megaMenuOpen = !megaMenuOpen; megaMenu = 'blue-shop'; hasMegaMenu = true; }"        class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary"
+    >
+        
+        <span class="flex-1">Blue Shop</span>
+
+        
+                    <svg class="hidden lg:inline-block ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            </a>
+</div>
+
+
+    -->
+    <div x-data="{ show: false }" class="relative" @mouseenter="if (window.innerWidth &gt;= 1024) { megaMenuOpen = true; megaMenu = 'news'; hasMegaMenu = true }" @mouseleave="if (window.innerWidth &gt;= 1024) { setTimeout(() =&gt; { if (!hasMegaMenu) megaMenuOpen = false }, 100) }">
+    <a href="https://camtel.cm/news" @click="if (window.innerWidth &gt;= 1024) { megaMenuOpen = !megaMenuOpen; megaMenu = 'news'; hasMegaMenu = true; }" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">News</span>
+
+        
+                    <svg class="hidden lg:inline-block ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            </a>
+</div>
+
+
+
+    <div x-data="{ show: false }" class="relative" @mouseenter="if (window.innerWidth &gt;= 1024) { megaMenuOpen = true; megaMenu = 'support'; hasMegaMenu = true }" @mouseleave="if (window.innerWidth &gt;= 1024) { setTimeout(() =&gt; { if (!hasMegaMenu) megaMenuOpen = false }, 100) }">
+    <a href="https://camtel.cm/support" @click="if (window.innerWidth &gt;= 1024) { megaMenuOpen = !megaMenuOpen; megaMenu = 'support'; hasMegaMenu = true; }" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">Support</span>
+
+        
+                    <svg class="hidden lg:inline-block ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            </a>
+</div>
+
+
+
+    <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://career.camtel.cm/" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary" target="_blank">
+        
+        <span class="flex-1">Careers</span>
+
+        
+            </a>
+</div>
+            </div>
+        </div>
+        
+        <!-- Mega Menu -->
+        <div x-show="megaMenuOpen &amp;&amp; (megaMenu === 'services' || megaMenu === 'products' || megaMenu === 'support' || megaMenu === 'business' || megaMenu === 'search' || megaMenu === 'about' || megaMenu === 'blue-shop' || megaMenu === 'news')" @mouseenter="megaMenuOpen = true; hasMegaMenu = true" @mouseleave="megaMenuOpen = false; hasMegaMenu = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" class="hidden lg:block absolute left-0 w-full bg-white shadow-xl z-50 border-b border-gray-200" style="display: none;">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 py-6 sm:py-8">
+        <div x-show="hasMegaMenu" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform -translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-2" class="" style="display: none;">
+        </div>
+        
+        <!-- About Us Section -->
+        <div x-show="megaMenu === 'about'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8" style="display: none;">
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Who are we?</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Discover our history, our missions, our values, …</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/about" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Camtel in nutshell</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Our network coverage</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Explore our network coverage across Cameroon.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/coverage" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Coverage Overview</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Documentation</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Read and download our communiques and official documents.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/documentation" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Access Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End About Us Section -->
+
+        <!-- Services Section -->
+        <div x-show="megaMenu === 'services'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            <!-- Mobile Service -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Mobile</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Stay tuned
+ everywhere with blue, the 100% Cameroonian mobile network. 
+National/international calls &amp; sms, broadband mobile internet, local
+ roaming, and more!</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/services#mobile" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Discover our mobile bundles</a></li>
+                </ul>
+            </div>
+
+            <!-- Fixed Service --> 
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Landline</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Take full advantage of the potential of fibre at home. Unlimited Internet up to 50 Mbps!</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/services#fiber" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Read more</a></li>
+                </ul>
+            </div>
+
+            <!-- Transport Service -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Transport</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">We are the first-class partner for connectivity at the heart of Africa from the Americas.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/services#transport" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Read more</a></li>
+                </ul>
+            </div>
+
+            <!-- Data Center Service -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Data Storage</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Thanks to 
+our Tier 3 certified datacentre, we guarantee you: a secure backup and 
+restoration, servers and applications, 24/7 availability.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/services#storage" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Discover our offers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Blue Shop Section -->
+        <div x-show="megaMenu === 'blue-shop'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8" style="display: none;">
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Subscribe</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">To subscribe to blue, contact an agency, a sale point or an authorised distributor with your national identity card.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/agencies" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Our Agencies</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m1.6 8L5 3H3m4 10v1a2 2 0 002 2h10a2 2 0 002-2v-1M7 13v-1a2 2 0 012-2h6a2 2 0 012 2v1"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Purchase a terminal</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">You can purchase your smartphones, modems, routers, Internet modems, accessories.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="#" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Our terminals</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Activate a Bundle</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Choose and activate a Voice or Data Bundle.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/services#mobile" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Activate a plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Blue Shop Section -->
+
+        <!-- News Section -->
+        <div x-show="megaMenu === 'news'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8" style="display: none;">
+            <!-- News -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Events</h3>    
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Stay up to date with CAMTEL news.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/news?type[]=event" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Events</a></li>
+                </ul>
+            </div>
+            <!-- Podcasts -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Podcasts</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Listen to Camtel Actu, our radio program.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/news?type[]=podcast" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Podcasts</a></li>
+                </ul>
+            </div>
+            <!-- Media library -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Media library</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Relive the highlights of the company's life in pictures!</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/news?type[]=media-library" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Browse our gallery</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End News Section -->
+
+        <!-- Support Section -->
+        <div x-show="megaMenu === 'support'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8" style="display: none;">
+            <!-- Help Center -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Help Center</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Find answers to common questions.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/support#faqs" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">FAQs</a></li>
+                   </ul>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Contact Us</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Our support team is at your disposal 24/7.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="#" data-action="open-chatbot" onclick="event.preventDefault(); Livewire.dispatch('open-chatbot');" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded cursor-pointer">Live Chat</a></li>
+                    <li><a href="https://camtel.cm/support#contact-form" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Leave us a message</a></li>
+                   </ul>
+            </div>
+
+            <!-- Service Centers -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">In your Vicinity</h3>
+                </div>
+                <p class="text-sm sm:text-base text-gray-600">Find a sales point near you.</p>
+                <ul class="space-y-1 sm:space-y-2">
+                    <li><a href="https://camtel.cm/agencies" class="block p-2 text-sm sm:text-base text-gray-600 hover:bg-gray-100 text-primary rounded">Agency Locations</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Features -->
+            <div class="space-y-3 sm:space-y-4">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <svg class="h-6 w-6 sm:h-8 sm:w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">Support Features</h3>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="bg-gray-100 rounded-lg p-3 sm:p-4">
+                        <h4 class="text-gray-900 font-semibold text-sm sm:text-base">Business Hours Support</h4>
+                        <p class="text-gray-600 text-xs sm:text-sm">Monday to Friday, 8:00 AM to 3:30 PM (GMT+1)</p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-3 sm:p-4">
+                        <h4 class="text-gray-900 font-semibold text-sm sm:text-base">Online Chat</h4>
+                        <p class="text-gray-600 text-xs sm:text-sm">Instant help available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Support Section -->
+    </div>
+</div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div x-show="isOpen" @click.outside="isOpen = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" class="lg:hidden bg-white shadow-lg border-t border-gray-200 absolute left-0 right-0 top-full z-40" style="display: none;">
+        <div class="px-4 pt-2 pb-3 space-y-1 max-h-[calc(100vh-200px)] overflow-y-auto">
+            <!-- Mobile Search -->
+            <div class="border-b border-gray-200 pb-3 mb-3">
+                <form action="https://camtel.cm/search" method="GET" class="w-full">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2"></line>
+                            </svg>
+                        </div>
+                        <input type="search" name="q" placeholder="Search products, services, news..." autocomplete="off" class="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 bg-gray-50 border border-gray-200 placeholder-gray-500 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Navigation Items -->
+            <div class="space-y-1">
+                <div @click="isOpen = false">
+            <!-- Home -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 bg-primary/10 text-primary hover:bg-primary/20">
+        
+        <span class="flex-1">Home</span>
+
+        
+            </a>
+</div>
+
+
+            
+            <!-- About Us with dropdown -->
+            <div x-data="{ aboutOpen: false }" class="space-y-1" @click.stop="">
+                <button @click="aboutOpen = !aboutOpen" class="w-full flex items-center justify-between px-3 py-2 text-left text-gray-700 hover:bg-gray-100 hover:text-primary rounded-md transition-colors duration-200">
+                    <span class="font-bold">About Us</span>
+                    <svg class="h-5 w-5 transition-transform duration-200" :class="{ 'rotate-180': aboutOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div x-show="aboutOpen" x-transition="" class="ml-4 space-y-1" style="display: none;">
+                    <a href="https://camtel.cm/about" @click="isOpen = false" class="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md">Camtel in nutshell</a>
+                    <a href="https://camtel.cm/coverage" @click="isOpen = false" class="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md">Our network coverage</a>
+                    <a href="https://camtel.cm/documentation" @click="isOpen = false" class="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md">Access Documentation</a>
+                    <a href="http://bluedynamiccoveragemap.camtel.cm/" target="_blank" @click="isOpen = false" class="block px-3 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md">Mobile Network Coverage</a>
+                </div>
+            </div>
+            
+            <!-- Services -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/services" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">Our Services</span>
+
+        
+            </a>
+</div>
+
+
+            
+            <!-- Blue Shop -->
+             <!--
+                <div x-data="{ show: false }" class="relative" 
+    @mouseenter="megaMenuOpen = false;"
+    @mouseleave=""
+>
+    <a href="https://camtel.cm/blue-shop" 
+              class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary"
+    >
+        
+        <span class="flex-1">Blue Shop</span>
+
+        
+            </a>
+</div>
+
+
+            -->
+            <!-- News -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/news" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">News</span>
+
+        
+            </a>
+</div>
+
+
+            
+            <!-- Support -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/support" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">Support</span>
+
+        
+            </a>
+</div>
+
+
+            
+            <!-- Careers -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://career.camtel.cm/" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary" target="_blank">
+        
+        <span class="flex-1">Careers</span>
+
+        
+            </a>
+</div>
+
+
+            
+            <!-- Our Agencies -->
+            <div x-data="{ show: false }" class="relative" @mouseenter="megaMenuOpen = false;" @mouseleave="">
+    <a href="https://camtel.cm/agencies" class="flex items-center px-2 sm:px-3 py-2 sm:py-2.5 text-sm sm:text-base font-bold rounded-md transition-colors duration-200 text-gray-700 hover:bg-gray-100 hover:text-primary">
+        
+        <span class="flex-1">Our Agencies</span>
+
+        
+            </a>
+</div>
+
+
+        </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="border-t border-gray-200 pt-3 mt-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Live Chat -->
+                    <button onclick="Livewire.dispatch('open-chatbot'); isOpen = false" class="flex items-center justify-center space-x-2 bg-primary text-white px-4 py-3 rounded-lg font-medium">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        <span>Live Chat</span>
+                    </button>
+                    
+                    <!-- Agencies -->
+                    <a href="https://camtel.cm/agencies" class="flex items-center justify-center space-x-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-lg font-medium">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                        <span>Agencies</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+ 
+        <!-- Page Content -->
+        <main class="flex-1 w-full">
+            
+            
+                <!-- Hero Section -->
+        <div>
+        
+    <section class="relative flex flex-col justify-center items-center overflow-hidden hero-section w-full" style="min-height: 80vh;">
+                    <style>
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity var(--transition-duration, 1000ms) ease, transform var(--transition-duration, 1000ms) ease;
+        display: flex;
+    }
+    .carousel .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .carousel .slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+    /* Controls */
+    .carousel .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        z-index: 3;
+    }
+    .carousel .control:hover {
+        background: rgba(0,0,0,0.6);
+    }
+    .carousel .control.prev {
+        left: 8px;
+    }
+    .carousel .control.next {
+        right: 8px;
+    }
+    /* Indicators */
+    .carousel .indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+    }
+    .carousel .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    .carousel .indicator.active {
+        background: #fff;
+    }
+    /* Animation helpers */
+    .anim-fade-in { animation: fadeIn var(--transition-duration, 600ms) ease both; }
+    .anim-zoom-in { animation: zoomIn var(--transition-duration, 600ms) ease both; }
+    .anim-rotate-in { animation: rotateIn var(--transition-duration, 600ms) ease both; }
+    .anim-flip-in { animation: flipIn var(--transition-duration, 600ms) ease both; }
+    .anim-bounce-in { animation: bounceIn var(--transition-duration, 600ms) ease both; }
+    .anim-scale-in { animation: scaleIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-left-in { animation: slideLeftIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-right-in { animation: slideRightIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-up-in { animation: slideUpIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-down-in { animation: slideDownIn var(--transition-duration, 600ms) ease both; }
+    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(1.05) } to { opacity: 1; transform: scale(1) } }
+    @keyframes rotateIn { from { opacity: 0; transform: rotate(-8deg) scale(1.02) } to { opacity: 1; transform: rotate(0) scale(1) } }
+    @keyframes flipIn { from { opacity: 0; transform: rotateY(70deg) } to { opacity: 1; transform: rotateY(0) } }
+    @keyframes bounceIn { 0% { opacity: 0; transform: translateY(20px) } 60% { opacity: 1; transform: translateY(-6px) } 100% { transform: translateY(0) } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.98) } to { opacity: 1; transform: scale(1) } }
+    @keyframes slideLeftIn { from { opacity: 0; transform: translateX(20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideRightIn { from { opacity: 0; transform: translateX(-20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideDownIn { from { opacity: 0; transform: translateY(-20px) } to { opacity: 1; transform: translateY(0) } }
+</style>
+
+<div id="carousel_68d1161b0a135" class="carousel bg-primary" data-animation="slide-right" data-interval="5000" data-transition-duration="1000" style="--transition-duration: 1000ms;">
+    <div class="slides">
+                    <div class="slide active">
+                <img src="Camtel%20Site_fichiers/0a9ee3fb-f20c-406e-98ad-768362362acb.jpg" alt="Slide 1">
+                </div>
+                    </div>
+    </div>
+
+<script>
+    (function () {
+        var root = document.getElementById("carousel_68d1161b0a135");
+        if (!root) return;
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+        if (slides.length === 0) return;
+        var indicators = Array.prototype.slice.call(root.querySelectorAll('.indicator'));
+        var prevBtn = root.querySelector('.control.prev');
+        var nextBtn = root.querySelector('.control.next');
+        var animation = root.getAttribute('data-animation') || 'fade';
+        var intervalMs = parseInt(root.getAttribute('data-interval') || '5000', 10);
+        var transitionDuration = parseInt(root.getAttribute('data-transition-duration') || '1000', 10);
+        var current = 0;
+        var timer = null;
+
+        function clearAnimClasses(el) {
+            var classes = [
+                'anim-fade-in', 'anim-zoom-in', 'anim-rotate-in', 'anim-flip-in', 'anim-bounce-in', 'anim-scale-in',
+                'anim-slide-left-in', 'anim-slide-right-in', 'anim-slide-up-in', 'anim-slide-down-in'
+            ];
+            classes.forEach(function (c) { el.classList.remove(c); });
+        }
+
+        function animClassFor(animation) {
+            switch (animation) {
+                case 'fade': return 'anim-fade-in';
+                case 'zoom': return 'anim-zoom-in';
+                case 'rotate': return 'anim-rotate-in';
+                case 'flip': return 'anim-flip-in';
+                case 'bounce': return 'anim-bounce-in';
+                case 'scale': return 'anim-scale-in';
+                case 'slide-left': return 'anim-slide-left-in';
+                case 'slide-right': return 'anim-slide-right-in';
+                case 'slide-up': return 'anim-slide-up-in';
+                case 'slide-down': return 'anim-slide-down-in';
+                case 'slide': return 'anim-slide-left-in';
+                default: return 'anim-fade-in';
+            }
+        }
+
+        function show(index) {
+            if (index === current) return;
+            var prev = slides[current];
+            var next = slides[index];
+            if (!next) return;
+
+            prev.classList.remove('active');
+            clearAnimClasses(prev);
+
+            next.classList.add('active');
+            clearAnimClasses(next);
+            next.classList.add(animClassFor(animation));
+
+            indicators.forEach(function (ind) { ind.classList.remove('active'); });
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            current = index;
+        }
+
+        function next() { show((current + 1) % slides.length); }
+        function prev() { show((current - 1 + slides.length) % slides.length); }
+
+        function start() { if (timer) stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        if (nextBtn) nextBtn.addEventListener('click', function () { stop(); next(); start(); });
+        if (prevBtn) prevBtn.addEventListener('click', function () { stop(); prev(); start(); });
+        indicators.forEach(function (ind) {
+            ind.addEventListener('click', function () {
+                var idx = parseInt(ind.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) { stop(); show(idx); start(); }
+            });
+        });
+
+        // Touch support
+        var startX = 0, endX = 0;
+        root.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].screenX;
+            var delta = endX - startX;
+            if (Math.abs(delta) > 30) { stop(); (delta < 0 ? next : prev)(); start(); }
+        });
+
+        // Initialize
+        slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides.length > 1) start();
+})();
+</script>                
+                    <div class="absolute inset-0 bg-black opacity-70 pointer-events-none" style="z-index: 20; background-color: rgba(0, 0, 0, 0.5) !important;"></div>
+                
+        
+                
+                    <div class="flex justify-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style="z-index: 30;">
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center items-center text-center">        
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-roboto text-white mb-4 sm:mb-6 leading-tight">Welcome to CAMTEL!</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-200 mb-6 sm:mb-8 font-roboto leading-relaxed">Cameroon's incumbent telecommunications operator</p>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 lg:gap-6 w-full max-w-md sm:max-w-none hero-buttons">          
+                                                                        <a href="https://camtel.cm/services" class="w-full sm:w-auto">
+                                <button type="button" class="inline-flex items-center justify-center font-medium rounded-lg focus:outline-none focus:ring-offset-2 transition-colors duration-200 bg-primary hover:bg-primary-dark text-white border border-primary hover:border-primary-dark px-4 py-2 text-base w-full sm:w-auto">
+        Discover our offers
+</button>                             </a>
+                                                    <a href="https://camtel.cm/support#contact-form" class="w-full sm:w-auto">
+                                <button type="button" class="inline-flex items-center justify-center font-medium rounded-lg focus:outline-none focus:ring-offset-2 transition-colors duration-200 bg-secondary hover:bg-secondary-dark text-primary focus:ring-secondary border border-primary px-4 py-2 text-base w-full sm:w-auto">
+        Contact us
+</button>                             </a>
+                                                                                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Modal Advert Popup -->
+    <div id="hero-advert-modal" class="hidden fixed inset-0 z-50 items-center justify-center">
+        <div class="absolute inset-0 bg-black/60 transition-opacity duration-300"></div>
+        <div class="relative bg-white rounded-3xl max-w-5xl w-full mx-4 p-6 sm:p-8 lg:p-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+            <!-- Close Button -->
+            <button id="hero-advert-close" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors duration-200 z-10">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Body: image + content layout -->
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
+                <!-- Image Container (Optional) -->
+                <div id="hero-advert-image" class="overflow-hidden rounded-2xl shadow-xl h-80 md:h-96"></div>
+
+                <!-- Content -->
+                <div class="text-center md:text-left">
+                    <h3 id="hero-advert-title" class="text-2xl sm:text-3xl font-extrabold mb-3 text-gray-900 tracking-tight"></h3>
+                    <div id="hero-advert-content" class="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6"></div>
+                    
+                    <!-- CTA Button -->
+                    <div class="flex justify-center md:justify-start">
+                        <a id="hero-advert-cta" href="#" class="inline-block w-full md:w-auto bg-primary text-white font-extrabold text-lg sm:text-xl px-6 sm:px-8 lg:px-10 py-4 sm:py-4 lg:py-5 rounded-2xl hover:bg-primary-dark transition-all duration-200 transform hover:scale-105 shadow-xl"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+</div>            <div data-aos="fade-up" class="aos-init aos-animate">
+        <section class="py-8 sm:py-12 lg:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <!-- Content Section -->
+            <div class="order-2 lg:order-1 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">About Us</h2>
+                <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">CAMTEL
+ (Cameroon Telecommunications) is Cameroon's incumbent 
+telecommunications operator, created in 1998. We offer reliable, 
+accessible and secure telecommunications solutions for individuals, 
+businesses, and institutions.</p>
+                
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                                            <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-1 sm:mb-2">3500+ </div>
+                            <div class="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">Employees</div>
+                        </div>
+                                            <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-1 sm:mb-2">ISO Certified </div>
+                            <div class="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">9001:2015 </div>
+                        </div>
+                                            <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-1 sm:mb-2">10 </div>
+                            <div class="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">Regions served </div>
+                        </div>
+                                            <div class="text-center p-3 sm:p-4 bg-gray-50 rounded-lg aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                            <div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-1 sm:mb-2">26+ </div>
+                            <div class="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">Years of experience</div>
+                        </div>
+                                    </div>
+            </div>
+            
+            <!-- Image Section -->
+            <div class="order-1 lg:order-2 relative w-full aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+                <div class="relative w-full">
+                    <!-- Main Image -->
+                    <div class="relative w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+                                                    <img src="Camtel%20Site_fichiers/af9f60b0-8961-4015-b780-bf1e78141c37.jpg" alt="About Us" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700">
+                                                
+                        <!-- Overlay Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                    </div>
+                    
+                    <!-- Trust Badge -->
+
+                                        <div class="absolute -bottom-4 sm:-bottom-6 lg:-bottom-14 -left-6 sm:-left-8 lg:-left-10 bg-primary text-white p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl shadow-xl">
+                        <div class="text-sm sm:text-base lg:text-lg font-bold mb-1">Trusted by</div>
+                        <div class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold">5M+</div>
+                        <div class="text-xs sm:text-sm lg:text-base opacity-90">Happy Customers</div>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-2 -right-2 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-primary/10 rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary rounded-full"></div>
+                    </div>
+                    
+                    <div class="absolute top-1/2 -right-4 sm:-right-6 lg:-right-8 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-secondary rounded-full opacity-80"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>         </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="aos-init aos-animate">
+        <section id="services" class="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-36 h-36 sm:w-48 sm:h-48 lg:w-72 lg:h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Header Section -->
+        <div class="text-center mb-12 sm:mb-16 aos-init aos-animate" data-aos="fade-up">
+           
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                <span class="text-primary">Our Services</span>
+            </h2>
+            <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Discover our cutting-edge services tailored to the needs of individuals, households, and businesses.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                            <div class="group relative h-full bg-green-50 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+                        <!-- Image Section -->
+                        <div class="relative h-40 sm:h-48 overflow-hidden">
+                            <img src="Camtel%20Site_fichiers/96238bbe-976a-4d7b-b785-57c1a581e925.jpg" alt="Mobile" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute top-3 sm:top-4 right-3 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6 flex flex-col items-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Mobile</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                                    Voice, SMS, 4G Data and value-added services under the blue brand.
+                                </p>
+                            </div>
+                            <div class="mt-4 sm:mt-6 pt-4 border-t border-gray-100">
+                                <div class="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                    <a href="https://camtel.cm/services#mobile">Learn more → </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="group relative h-full bg-green-50 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+                        <!-- Image Section -->
+                        <div class="relative h-40 sm:h-48 overflow-hidden">
+                            <img src="Camtel%20Site_fichiers/bb030db6-2bf4-4957-a1b6-228010910736.jpg" alt="Landline" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute top-3 sm:top-4 right-3 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6 flex flex-col items-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Landline</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                                    Telephony, broadband optical fibre 
+Internet, and IP solutions for individuals and businesses.
+                                </p>
+                            </div>
+                            <div class="mt-4 sm:mt-6 pt-4 border-t border-gray-100">
+                                <div class="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                    <a href="https://camtel.cm/services#fixed">Learn more → </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="group relative h-full bg-green-50 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+                        <!-- Image Section -->
+                        <div class="relative h-40 sm:h-48 overflow-hidden">
+                            <img src="Camtel%20Site_fichiers/e6fe4755-b3ee-4f08-8a47-68f53d9c1e8a.jpg" alt="Transport" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute top-3 sm:top-4 right-3 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6 flex flex-col items-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Transport</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                                    Transmission links (fiber, DWDM, IP/MPLS) for operators, ISPs and major accounts.
+                                </p>
+                            </div>
+                            <div class="mt-4 sm:mt-6 pt-4 border-t border-gray-100">
+                                <div class="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                    <a href="https://camtel.cm/services#transport">Learn more → </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="group relative h-full bg-green-50 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+                        <!-- Image Section -->
+                        <div class="relative h-40 sm:h-48 overflow-hidden">
+                            <img src="Camtel%20Site_fichiers/21b07424-2dff-4c07-807d-c2cdc118eeb1.jpg" alt="Data Storage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute top-3 sm:top-4 right-3 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="p-4 sm:p-6 flex flex-col items-between">
+                            <div class="flex-1">
+                                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Data Storage</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                                    Hosting, backup and cloud services in our datacentre.
+                                </p>
+                            </div>
+                            <div class="mt-4 sm:mt-6 pt-4 border-t border-gray-100">
+                                <div class="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                                    <a href="https://camtel.cm/services#storage">Learn more → </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>     </div>
+    
+    <div data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
+        <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 sm:mb-16 aos-init aos-animate" data-aos="fade-up">
+           
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <span class="text-primary">Our infrastructure Assets</span>
+        </h2>
+        <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Our infrastructure is based on a foundation of 4 pillars, guaranteeing access to robust and scalable services.
+        </p>
+    </div>
+       
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-primary mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">National Fiber Optic Network</h3>
+                <div class="text-4xl font-bold text-primary mb-2">20,000+</div>
+                <p class="text-gray-600">Kilometers of reliable network</p>
+            </div>
+            <div class="text-center bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-primary mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">International capacity</h3>
+                <div class="text-4xl font-bold text-primary mb-2">4</div>
+                <p class="text-gray-600">submarine cables with a capacity of 1.7 Tbps</p>
+            </div>
+            <div class="text-center bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-primary mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Tier 3-certified datacentre</h3>
+                <div class="text-4xl font-bold text-primary mb-2">Up to 250 GB</div>
+                <p class="text-gray-600">of storage space, local hosting, secure backup</p>
+            </div>
+            <div class="text-center bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
+                <div class="text-primary mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Technical partnership for satellite services</h3>
+                <div class="text-4xl font-bold text-primary mb-2"></div>
+                <p class="text-gray-600"></p>
+            </div>
+        </div>
+    </div>
+</section>     </div>
+                
+    <div data-aos="fade-up" data-aos-delay="200" class="aos-init">
+                    <section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 aos-init" data-aos="fade-up">Our Products &amp; Offerings</h2>
+    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" class="aos-init">
+            <section class="relative flex flex-col md:flex-row items-stretch min-h-[180px] bg-camtel my-2 mx-4 md:mx-0">
+    <!-- Blue Shop Info (Left) -->
+    <div class="hidden md:flex flex-1 bg-gradient-to-r from-primary to-primary-dark py-12 px-8 items-center relative z-10" style="clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Blue Shop</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Enjoy great SIM and data plan deals and special offers 
+bundled with any smartphone of your choice at any Blue Shop.
+            </p>
+                            <a href="https://camtel.cm/blue-page" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <div class="flex md:hidden flex-1 bg-gradient-to-r from-primary to-primary-dark py-8 px-6 flex items-center relative z-10 rounded-lg">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Blue Shop</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Enjoy great SIM and data plan deals and special offers 
+bundled with any smartphone of your choice at any Blue Shop.
+            </p>
+                            <a href="https://camtel.cm/blue-page" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <!-- Carousel Section - Hidden on Mobile -->
+    <div class="hidden md:flex flex-1 relative overflow-hidden bg-white items-center justify-center min-h-[180px] md:min-h-[400px] rounded-lg md:rounded-none" style="clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);">
+        <style>
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity var(--transition-duration, 1000ms) ease, transform var(--transition-duration, 1000ms) ease;
+        display: flex;
+    }
+    .carousel .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .carousel .slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+    /* Controls */
+    .carousel .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        z-index: 3;
+    }
+    .carousel .control:hover {
+        background: rgba(0,0,0,0.6);
+    }
+    .carousel .control.prev {
+        left: 8px;
+    }
+    .carousel .control.next {
+        right: 8px;
+    }
+    /* Indicators */
+    .carousel .indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+    }
+    .carousel .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    .carousel .indicator.active {
+        background: #fff;
+    }
+    /* Animation helpers */
+    .anim-fade-in { animation: fadeIn var(--transition-duration, 600ms) ease both; }
+    .anim-zoom-in { animation: zoomIn var(--transition-duration, 600ms) ease both; }
+    .anim-rotate-in { animation: rotateIn var(--transition-duration, 600ms) ease both; }
+    .anim-flip-in { animation: flipIn var(--transition-duration, 600ms) ease both; }
+    .anim-bounce-in { animation: bounceIn var(--transition-duration, 600ms) ease both; }
+    .anim-scale-in { animation: scaleIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-left-in { animation: slideLeftIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-right-in { animation: slideRightIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-up-in { animation: slideUpIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-down-in { animation: slideDownIn var(--transition-duration, 600ms) ease both; }
+    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(1.05) } to { opacity: 1; transform: scale(1) } }
+    @keyframes rotateIn { from { opacity: 0; transform: rotate(-8deg) scale(1.02) } to { opacity: 1; transform: rotate(0) scale(1) } }
+    @keyframes flipIn { from { opacity: 0; transform: rotateY(70deg) } to { opacity: 1; transform: rotateY(0) } }
+    @keyframes bounceIn { 0% { opacity: 0; transform: translateY(20px) } 60% { opacity: 1; transform: translateY(-6px) } 100% { transform: translateY(0) } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.98) } to { opacity: 1; transform: scale(1) } }
+    @keyframes slideLeftIn { from { opacity: 0; transform: translateX(20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideRightIn { from { opacity: 0; transform: translateX(-20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideDownIn { from { opacity: 0; transform: translateY(-20px) } to { opacity: 1; transform: translateY(0) } }
+</style>
+
+<div id="carousel_68d1161b0b836" class="carousel bg-primary" data-animation="fade" data-interval="5000" data-transition-duration="1000" style="--transition-duration: 1000ms;">
+    <div class="slides">
+                    <div class="slide active">
+                <img src="Camtel%20Site_fichiers/96238bbe-976a-4d7b-b785-57c1a581e925.jpg" alt="Slide 1">
+                </div>
+                    </div>
+    </div>
+
+<script>
+    (function () {
+        var root = document.getElementById("carousel_68d1161b0b836");
+        if (!root) return;
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+        if (slides.length === 0) return;
+        var indicators = Array.prototype.slice.call(root.querySelectorAll('.indicator'));
+        var prevBtn = root.querySelector('.control.prev');
+        var nextBtn = root.querySelector('.control.next');
+        var animation = root.getAttribute('data-animation') || 'fade';
+        var intervalMs = parseInt(root.getAttribute('data-interval') || '5000', 10);
+        var transitionDuration = parseInt(root.getAttribute('data-transition-duration') || '1000', 10);
+        var current = 0;
+        var timer = null;
+
+        function clearAnimClasses(el) {
+            var classes = [
+                'anim-fade-in', 'anim-zoom-in', 'anim-rotate-in', 'anim-flip-in', 'anim-bounce-in', 'anim-scale-in',
+                'anim-slide-left-in', 'anim-slide-right-in', 'anim-slide-up-in', 'anim-slide-down-in'
+            ];
+            classes.forEach(function (c) { el.classList.remove(c); });
+        }
+
+        function animClassFor(animation) {
+            switch (animation) {
+                case 'fade': return 'anim-fade-in';
+                case 'zoom': return 'anim-zoom-in';
+                case 'rotate': return 'anim-rotate-in';
+                case 'flip': return 'anim-flip-in';
+                case 'bounce': return 'anim-bounce-in';
+                case 'scale': return 'anim-scale-in';
+                case 'slide-left': return 'anim-slide-left-in';
+                case 'slide-right': return 'anim-slide-right-in';
+                case 'slide-up': return 'anim-slide-up-in';
+                case 'slide-down': return 'anim-slide-down-in';
+                case 'slide': return 'anim-slide-left-in';
+                default: return 'anim-fade-in';
+            }
+        }
+
+        function show(index) {
+            if (index === current) return;
+            var prev = slides[current];
+            var next = slides[index];
+            if (!next) return;
+
+            prev.classList.remove('active');
+            clearAnimClasses(prev);
+
+            next.classList.add('active');
+            clearAnimClasses(next);
+            next.classList.add(animClassFor(animation));
+
+            indicators.forEach(function (ind) { ind.classList.remove('active'); });
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            current = index;
+        }
+
+        function next() { show((current + 1) % slides.length); }
+        function prev() { show((current - 1 + slides.length) % slides.length); }
+
+        function start() { if (timer) stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        if (nextBtn) nextBtn.addEventListener('click', function () { stop(); next(); start(); });
+        if (prevBtn) prevBtn.addEventListener('click', function () { stop(); prev(); start(); });
+        indicators.forEach(function (ind) {
+            ind.addEventListener('click', function () {
+                var idx = parseInt(ind.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) { stop(); show(idx); start(); }
+            });
+        });
+
+        // Touch support
+        var startX = 0, endX = 0;
+        root.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].screenX;
+            var delta = endX - startX;
+            if (Math.abs(delta) > 30) { stop(); (delta < 0 ? next : prev)(); start(); }
+        });
+
+        // Initialize
+        slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides.length > 1) start();
+})();
+</script>        </div>
+</section>        </div>
+                    <div data-aos="fade-up" data-aos-delay="400" class="aos-init">
+            <section class="relative flex flex-col md:flex-row items-stretch min-h-[180px] bg-camtel my-2 mx-4 md:mx-0">
+    <!-- Blue Shop Info (Left) -->
+    <div class="hidden md:flex flex-1 bg-gradient-to-r from-primary to-primary-dark py-12 px-8 items-center relative z-10" style="clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Fiber Connect</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Fiber Connect is a high-speed internet service that 
+provides a reliable and fast internet connection to your home or 
+business.
+            </p>
+                            <a href="https://fiberconnect.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <div class="flex md:hidden flex-1 bg-gradient-to-r from-primary to-primary-dark py-8 px-6 flex items-center relative z-10 rounded-lg">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Fiber Connect</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Fiber Connect is a high-speed internet service that 
+provides a reliable and fast internet connection to your home or 
+business.
+            </p>
+                            <a href="https://fiberconnect.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <!-- Carousel Section - Hidden on Mobile -->
+    <div class="hidden md:flex flex-1 relative overflow-hidden bg-white items-center justify-center min-h-[180px] md:min-h-[400px] rounded-lg md:rounded-none" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);">
+        <style>
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity var(--transition-duration, 1000ms) ease, transform var(--transition-duration, 1000ms) ease;
+        display: flex;
+    }
+    .carousel .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .carousel .slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+    /* Controls */
+    .carousel .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        z-index: 3;
+    }
+    .carousel .control:hover {
+        background: rgba(0,0,0,0.6);
+    }
+    .carousel .control.prev {
+        left: 8px;
+    }
+    .carousel .control.next {
+        right: 8px;
+    }
+    /* Indicators */
+    .carousel .indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+    }
+    .carousel .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    .carousel .indicator.active {
+        background: #fff;
+    }
+    /* Animation helpers */
+    .anim-fade-in { animation: fadeIn var(--transition-duration, 600ms) ease both; }
+    .anim-zoom-in { animation: zoomIn var(--transition-duration, 600ms) ease both; }
+    .anim-rotate-in { animation: rotateIn var(--transition-duration, 600ms) ease both; }
+    .anim-flip-in { animation: flipIn var(--transition-duration, 600ms) ease both; }
+    .anim-bounce-in { animation: bounceIn var(--transition-duration, 600ms) ease both; }
+    .anim-scale-in { animation: scaleIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-left-in { animation: slideLeftIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-right-in { animation: slideRightIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-up-in { animation: slideUpIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-down-in { animation: slideDownIn var(--transition-duration, 600ms) ease both; }
+    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(1.05) } to { opacity: 1; transform: scale(1) } }
+    @keyframes rotateIn { from { opacity: 0; transform: rotate(-8deg) scale(1.02) } to { opacity: 1; transform: rotate(0) scale(1) } }
+    @keyframes flipIn { from { opacity: 0; transform: rotateY(70deg) } to { opacity: 1; transform: rotateY(0) } }
+    @keyframes bounceIn { 0% { opacity: 0; transform: translateY(20px) } 60% { opacity: 1; transform: translateY(-6px) } 100% { transform: translateY(0) } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.98) } to { opacity: 1; transform: scale(1) } }
+    @keyframes slideLeftIn { from { opacity: 0; transform: translateX(20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideRightIn { from { opacity: 0; transform: translateX(-20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideDownIn { from { opacity: 0; transform: translateY(-20px) } to { opacity: 1; transform: translateY(0) } }
+</style>
+
+<div id="carousel_68d1161b0b8c0" class="carousel bg-primary" data-animation="fade" data-interval="5000" data-transition-duration="1000" style="--transition-duration: 1000ms;">
+    <div class="slides">
+                    <div class="slide active">
+                <img src="Camtel%20Site_fichiers/fcbab6fd-f6e1-47b1-92fe-faa5bf948326.jpg" alt="Slide 1">
+                </div>
+                    </div>
+    </div>
+
+<script>
+    (function () {
+        var root = document.getElementById("carousel_68d1161b0b8c0");
+        if (!root) return;
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+        if (slides.length === 0) return;
+        var indicators = Array.prototype.slice.call(root.querySelectorAll('.indicator'));
+        var prevBtn = root.querySelector('.control.prev');
+        var nextBtn = root.querySelector('.control.next');
+        var animation = root.getAttribute('data-animation') || 'fade';
+        var intervalMs = parseInt(root.getAttribute('data-interval') || '5000', 10);
+        var transitionDuration = parseInt(root.getAttribute('data-transition-duration') || '1000', 10);
+        var current = 0;
+        var timer = null;
+
+        function clearAnimClasses(el) {
+            var classes = [
+                'anim-fade-in', 'anim-zoom-in', 'anim-rotate-in', 'anim-flip-in', 'anim-bounce-in', 'anim-scale-in',
+                'anim-slide-left-in', 'anim-slide-right-in', 'anim-slide-up-in', 'anim-slide-down-in'
+            ];
+            classes.forEach(function (c) { el.classList.remove(c); });
+        }
+
+        function animClassFor(animation) {
+            switch (animation) {
+                case 'fade': return 'anim-fade-in';
+                case 'zoom': return 'anim-zoom-in';
+                case 'rotate': return 'anim-rotate-in';
+                case 'flip': return 'anim-flip-in';
+                case 'bounce': return 'anim-bounce-in';
+                case 'scale': return 'anim-scale-in';
+                case 'slide-left': return 'anim-slide-left-in';
+                case 'slide-right': return 'anim-slide-right-in';
+                case 'slide-up': return 'anim-slide-up-in';
+                case 'slide-down': return 'anim-slide-down-in';
+                case 'slide': return 'anim-slide-left-in';
+                default: return 'anim-fade-in';
+            }
+        }
+
+        function show(index) {
+            if (index === current) return;
+            var prev = slides[current];
+            var next = slides[index];
+            if (!next) return;
+
+            prev.classList.remove('active');
+            clearAnimClasses(prev);
+
+            next.classList.add('active');
+            clearAnimClasses(next);
+            next.classList.add(animClassFor(animation));
+
+            indicators.forEach(function (ind) { ind.classList.remove('active'); });
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            current = index;
+        }
+
+        function next() { show((current + 1) % slides.length); }
+        function prev() { show((current - 1 + slides.length) % slides.length); }
+
+        function start() { if (timer) stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        if (nextBtn) nextBtn.addEventListener('click', function () { stop(); next(); start(); });
+        if (prevBtn) prevBtn.addEventListener('click', function () { stop(); prev(); start(); });
+        indicators.forEach(function (ind) {
+            ind.addEventListener('click', function () {
+                var idx = parseInt(ind.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) { stop(); show(idx); start(); }
+            });
+        });
+
+        // Touch support
+        var startX = 0, endX = 0;
+        root.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].screenX;
+            var delta = endX - startX;
+            if (Math.abs(delta) > 30) { stop(); (delta < 0 ? next : prev)(); start(); }
+        });
+
+        // Initialize
+        slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides.length > 1) start();
+})();
+</script>        </div>
+</section>        </div>
+                    <div data-aos="fade-up" data-aos-delay="600" class="aos-init">
+            <section class="relative flex flex-col md:flex-row items-stretch min-h-[180px] bg-camtel my-2 mx-4 md:mx-0">
+    <!-- Blue Shop Info (Left) -->
+    <div class="hidden md:flex flex-1 bg-gradient-to-r from-primary to-primary-dark py-12 px-8 items-center relative z-10" style="clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Data Plans</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Data Plans is a high-speed internet service that 
+provides a reliable and fast internet connection to your home or 
+business.
+            </p>
+                            <a href="https://blue.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <div class="flex md:hidden flex-1 bg-gradient-to-r from-primary to-primary-dark py-8 px-6 flex items-center relative z-10 rounded-lg">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Data Plans</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Data Plans is a high-speed internet service that 
+provides a reliable and fast internet connection to your home or 
+business.
+            </p>
+                            <a href="https://blue.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <!-- Carousel Section - Hidden on Mobile -->
+    <div class="hidden md:flex flex-1 relative overflow-hidden bg-white items-center justify-center min-h-[180px] md:min-h-[400px] rounded-lg md:rounded-none" style="clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);">
+        <style>
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity var(--transition-duration, 1000ms) ease, transform var(--transition-duration, 1000ms) ease;
+        display: flex;
+    }
+    .carousel .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .carousel .slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+    /* Controls */
+    .carousel .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        z-index: 3;
+    }
+    .carousel .control:hover {
+        background: rgba(0,0,0,0.6);
+    }
+    .carousel .control.prev {
+        left: 8px;
+    }
+    .carousel .control.next {
+        right: 8px;
+    }
+    /* Indicators */
+    .carousel .indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+    }
+    .carousel .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    .carousel .indicator.active {
+        background: #fff;
+    }
+    /* Animation helpers */
+    .anim-fade-in { animation: fadeIn var(--transition-duration, 600ms) ease both; }
+    .anim-zoom-in { animation: zoomIn var(--transition-duration, 600ms) ease both; }
+    .anim-rotate-in { animation: rotateIn var(--transition-duration, 600ms) ease both; }
+    .anim-flip-in { animation: flipIn var(--transition-duration, 600ms) ease both; }
+    .anim-bounce-in { animation: bounceIn var(--transition-duration, 600ms) ease both; }
+    .anim-scale-in { animation: scaleIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-left-in { animation: slideLeftIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-right-in { animation: slideRightIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-up-in { animation: slideUpIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-down-in { animation: slideDownIn var(--transition-duration, 600ms) ease both; }
+    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(1.05) } to { opacity: 1; transform: scale(1) } }
+    @keyframes rotateIn { from { opacity: 0; transform: rotate(-8deg) scale(1.02) } to { opacity: 1; transform: rotate(0) scale(1) } }
+    @keyframes flipIn { from { opacity: 0; transform: rotateY(70deg) } to { opacity: 1; transform: rotateY(0) } }
+    @keyframes bounceIn { 0% { opacity: 0; transform: translateY(20px) } 60% { opacity: 1; transform: translateY(-6px) } 100% { transform: translateY(0) } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.98) } to { opacity: 1; transform: scale(1) } }
+    @keyframes slideLeftIn { from { opacity: 0; transform: translateX(20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideRightIn { from { opacity: 0; transform: translateX(-20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideDownIn { from { opacity: 0; transform: translateY(-20px) } to { opacity: 1; transform: translateY(0) } }
+</style>
+
+<div id="carousel_68d1161b0b932" class="carousel bg-primary" data-animation="fade" data-interval="5000" data-transition-duration="1000" style="--transition-duration: 1000ms;">
+    <div class="slides">
+                    <div class="slide active">
+                <img src="Camtel%20Site_fichiers/ae47435d-2db1-436b-a0c1-3cbd0a9ae8b5.jpg" alt="Slide 1">
+                </div>
+                    </div>
+    </div>
+
+<script>
+    (function () {
+        var root = document.getElementById("carousel_68d1161b0b932");
+        if (!root) return;
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+        if (slides.length === 0) return;
+        var indicators = Array.prototype.slice.call(root.querySelectorAll('.indicator'));
+        var prevBtn = root.querySelector('.control.prev');
+        var nextBtn = root.querySelector('.control.next');
+        var animation = root.getAttribute('data-animation') || 'fade';
+        var intervalMs = parseInt(root.getAttribute('data-interval') || '5000', 10);
+        var transitionDuration = parseInt(root.getAttribute('data-transition-duration') || '1000', 10);
+        var current = 0;
+        var timer = null;
+
+        function clearAnimClasses(el) {
+            var classes = [
+                'anim-fade-in', 'anim-zoom-in', 'anim-rotate-in', 'anim-flip-in', 'anim-bounce-in', 'anim-scale-in',
+                'anim-slide-left-in', 'anim-slide-right-in', 'anim-slide-up-in', 'anim-slide-down-in'
+            ];
+            classes.forEach(function (c) { el.classList.remove(c); });
+        }
+
+        function animClassFor(animation) {
+            switch (animation) {
+                case 'fade': return 'anim-fade-in';
+                case 'zoom': return 'anim-zoom-in';
+                case 'rotate': return 'anim-rotate-in';
+                case 'flip': return 'anim-flip-in';
+                case 'bounce': return 'anim-bounce-in';
+                case 'scale': return 'anim-scale-in';
+                case 'slide-left': return 'anim-slide-left-in';
+                case 'slide-right': return 'anim-slide-right-in';
+                case 'slide-up': return 'anim-slide-up-in';
+                case 'slide-down': return 'anim-slide-down-in';
+                case 'slide': return 'anim-slide-left-in';
+                default: return 'anim-fade-in';
+            }
+        }
+
+        function show(index) {
+            if (index === current) return;
+            var prev = slides[current];
+            var next = slides[index];
+            if (!next) return;
+
+            prev.classList.remove('active');
+            clearAnimClasses(prev);
+
+            next.classList.add('active');
+            clearAnimClasses(next);
+            next.classList.add(animClassFor(animation));
+
+            indicators.forEach(function (ind) { ind.classList.remove('active'); });
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            current = index;
+        }
+
+        function next() { show((current + 1) % slides.length); }
+        function prev() { show((current - 1 + slides.length) % slides.length); }
+
+        function start() { if (timer) stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        if (nextBtn) nextBtn.addEventListener('click', function () { stop(); next(); start(); });
+        if (prevBtn) prevBtn.addEventListener('click', function () { stop(); prev(); start(); });
+        indicators.forEach(function (ind) {
+            ind.addEventListener('click', function () {
+                var idx = parseInt(ind.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) { stop(); show(idx); start(); }
+            });
+        });
+
+        // Touch support
+        var startX = 0, endX = 0;
+        root.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].screenX;
+            var delta = endX - startX;
+            if (Math.abs(delta) > 30) { stop(); (delta < 0 ? next : prev)(); start(); }
+        });
+
+        // Initialize
+        slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides.length > 1) start();
+})();
+</script>        </div>
+</section>        </div>
+                    <div data-aos="fade-up" data-aos-delay="800" class="aos-init">
+            <section class="relative flex flex-col md:flex-row items-stretch min-h-[180px] bg-camtel my-2 mx-4 md:mx-0">
+    <!-- Blue Shop Info (Left) -->
+    <div class="hidden md:flex flex-1 bg-gradient-to-r from-primary to-primary-dark py-12 px-8 items-center relative z-10" style="clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Data Center</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Our Data Center offers secure, reliable, and scalable hosting solutions for your business needs.
+            </p>
+                            <a href="https://hosting.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <div class="flex md:hidden flex-1 bg-gradient-to-r from-primary to-primary-dark py-8 px-6 flex items-center relative z-10 rounded-lg">
+        <div>
+            <h2 class="text-white text-2xl md:text-3xl font-bold mb-3">Data Center</h2>
+            <p class="text-white text-base md:text-lg mb-6 max-w-md">
+                Our Data Center offers secure, reliable, and scalable hosting solutions for your business needs.
+            </p>
+                            <a href="https://hosting.camtel.cm/" class="inline-block bg-white text-camtel font-semibold px-6 py-2 rounded-full shadow hover:bg-camtel-light transition">
+                    View All Products
+                </a>
+                    </div>
+    </div>
+
+    <!-- Carousel Section - Hidden on Mobile -->
+    <div class="hidden md:flex flex-1 relative overflow-hidden bg-white items-center justify-center min-h-[180px] md:min-h-[400px] rounded-lg md:rounded-none" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);">
+        <style>
+    .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity var(--transition-duration, 1000ms) ease, transform var(--transition-duration, 1000ms) ease;
+        display: flex;
+    }
+    .carousel .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    .carousel .slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+    /* Controls */
+    .carousel .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        z-index: 3;
+    }
+    .carousel .control:hover {
+        background: rgba(0,0,0,0.6);
+    }
+    .carousel .control.prev {
+        left: 8px;
+    }
+    .carousel .control.next {
+        right: 8px;
+    }
+    /* Indicators */
+    .carousel .indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+    }
+    .carousel .indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    .carousel .indicator.active {
+        background: #fff;
+    }
+    /* Animation helpers */
+    .anim-fade-in { animation: fadeIn var(--transition-duration, 600ms) ease both; }
+    .anim-zoom-in { animation: zoomIn var(--transition-duration, 600ms) ease both; }
+    .anim-rotate-in { animation: rotateIn var(--transition-duration, 600ms) ease both; }
+    .anim-flip-in { animation: flipIn var(--transition-duration, 600ms) ease both; }
+    .anim-bounce-in { animation: bounceIn var(--transition-duration, 600ms) ease both; }
+    .anim-scale-in { animation: scaleIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-left-in { animation: slideLeftIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-right-in { animation: slideRightIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-up-in { animation: slideUpIn var(--transition-duration, 600ms) ease both; }
+    .anim-slide-down-in { animation: slideDownIn var(--transition-duration, 600ms) ease both; }
+    @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes zoomIn { from { opacity: 0; transform: scale(1.05) } to { opacity: 1; transform: scale(1) } }
+    @keyframes rotateIn { from { opacity: 0; transform: rotate(-8deg) scale(1.02) } to { opacity: 1; transform: rotate(0) scale(1) } }
+    @keyframes flipIn { from { opacity: 0; transform: rotateY(70deg) } to { opacity: 1; transform: rotateY(0) } }
+    @keyframes bounceIn { 0% { opacity: 0; transform: translateY(20px) } 60% { opacity: 1; transform: translateY(-6px) } 100% { transform: translateY(0) } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.98) } to { opacity: 1; transform: scale(1) } }
+    @keyframes slideLeftIn { from { opacity: 0; transform: translateX(20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideRightIn { from { opacity: 0; transform: translateX(-20px) } to { opacity: 1; transform: translateX(0) } }
+    @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+    @keyframes slideDownIn { from { opacity: 0; transform: translateY(-20px) } to { opacity: 1; transform: translateY(0) } }
+</style>
+
+<div id="carousel_68d1161b0b998" class="carousel bg-primary" data-animation="fade" data-interval="5000" data-transition-duration="1000" style="--transition-duration: 1000ms;">
+    <div class="slides">
+                    <div class="slide active">
+                <img src="Camtel%20Site_fichiers/64968f08-b6d1-4042-9b73-1def7588aeaa.jpg" alt="Slide 1">
+                </div>
+                    </div>
+    </div>
+
+<script>
+    (function () {
+        var root = document.getElementById("carousel_68d1161b0b998");
+        if (!root) return;
+        var slides = Array.prototype.slice.call(root.querySelectorAll('.slide'));
+        if (slides.length === 0) return;
+        var indicators = Array.prototype.slice.call(root.querySelectorAll('.indicator'));
+        var prevBtn = root.querySelector('.control.prev');
+        var nextBtn = root.querySelector('.control.next');
+        var animation = root.getAttribute('data-animation') || 'fade';
+        var intervalMs = parseInt(root.getAttribute('data-interval') || '5000', 10);
+        var transitionDuration = parseInt(root.getAttribute('data-transition-duration') || '1000', 10);
+        var current = 0;
+        var timer = null;
+
+        function clearAnimClasses(el) {
+            var classes = [
+                'anim-fade-in', 'anim-zoom-in', 'anim-rotate-in', 'anim-flip-in', 'anim-bounce-in', 'anim-scale-in',
+                'anim-slide-left-in', 'anim-slide-right-in', 'anim-slide-up-in', 'anim-slide-down-in'
+            ];
+            classes.forEach(function (c) { el.classList.remove(c); });
+        }
+
+        function animClassFor(animation) {
+            switch (animation) {
+                case 'fade': return 'anim-fade-in';
+                case 'zoom': return 'anim-zoom-in';
+                case 'rotate': return 'anim-rotate-in';
+                case 'flip': return 'anim-flip-in';
+                case 'bounce': return 'anim-bounce-in';
+                case 'scale': return 'anim-scale-in';
+                case 'slide-left': return 'anim-slide-left-in';
+                case 'slide-right': return 'anim-slide-right-in';
+                case 'slide-up': return 'anim-slide-up-in';
+                case 'slide-down': return 'anim-slide-down-in';
+                case 'slide': return 'anim-slide-left-in';
+                default: return 'anim-fade-in';
+            }
+        }
+
+        function show(index) {
+            if (index === current) return;
+            var prev = slides[current];
+            var next = slides[index];
+            if (!next) return;
+
+            prev.classList.remove('active');
+            clearAnimClasses(prev);
+
+            next.classList.add('active');
+            clearAnimClasses(next);
+            next.classList.add(animClassFor(animation));
+
+            indicators.forEach(function (ind) { ind.classList.remove('active'); });
+            if (indicators[index]) indicators[index].classList.add('active');
+
+            current = index;
+        }
+
+        function next() { show((current + 1) % slides.length); }
+        function prev() { show((current - 1 + slides.length) % slides.length); }
+
+        function start() { if (timer) stop(); timer = setInterval(next, intervalMs); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        if (nextBtn) nextBtn.addEventListener('click', function () { stop(); next(); start(); });
+        if (prevBtn) prevBtn.addEventListener('click', function () { stop(); prev(); start(); });
+        indicators.forEach(function (ind) {
+            ind.addEventListener('click', function () {
+                var idx = parseInt(ind.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) { stop(); show(idx); start(); }
+            });
+        });
+
+        // Touch support
+        var startX = 0, endX = 0;
+        root.addEventListener('touchstart', function (e) { startX = e.changedTouches[0].screenX; }, { passive: true });
+        root.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].screenX;
+            var delta = endX - startX;
+            if (Math.abs(delta) > 30) { stop(); (delta < 0 ? next : prev)(); start(); }
+        });
+
+        // Initialize
+        slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides.length > 1) start();
+})();
+</script>        </div>
+</section>        </div>
+    </section>             </div>
+    
+    <div data-aos="fade-up" data-aos-delay="400" class="aos-init">
+        <section class="py-20 bg-gradient-to-b from-white to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center mb-4">Manage Your Services Independently</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Access all your Camtel services with just a few clicks, wherever you are</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+            <a href="https://fiberconnect.camtel.cm/" class="group transform hover:scale-105 transition-all duration-300 h-full">
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-lg hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="text-primary group-hover:text-white mb-6">
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Fiber Connect</h3>
+                        <p class="text-gray-500 group-hover:text-gray-200">Subscribe to fibre from your sofa in one click.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://ebill.camtel.cm/" class="group transform hover:scale-105 transition-all duration-300 h-full">
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-lg hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="text-primary group-hover:text-white mb-6">
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">E Bill</h3>
+                        <p class="text-gray-500 group-hover:text-gray-200">View, download or pay your bills securely online.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.camtel.blueapp.my_blue&amp;hl=fr" class="group transform hover:scale-105 transition-all duration-300 h-full">
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-lg hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="text-primary group-hover:text-white mb-6">
+                            <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Application Blue recharge</h3>
+                        <p class="text-gray-500 group-hover:text-gray-200">Subscribe to an offer through your mobile app.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>     </div>
+
+    <div data-aos="fade-up" data-aos-delay="500" class="aos-init">
+                
+            <section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">News &amp; Network Updates</h2>
+        
+                <!-- Featured News -->
+        <div class="mb-12 transform hover:scale-[1.02] transition-all duration-300">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="relative">
+                                        <img src="Camtel%20Site_fichiers/877506fa-2fa3-48ee-8a00-d592ff24bda9.jpg" alt="TOURISM MEETS DIGITAL: CAMTEL AND MINTOUL UNITED" class="w-full h-96 object-cover">
+                    <div class="absolute top-4 left-4 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Featured
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>September 18, 2025</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">TOURISM MEETS DIGITAL: CAMTEL AND MINTOUL UNITED</h3>
+                    <p class="text-gray-600 mb-6">On Thursday, September
+ 18, 2025, CAMTEL and the Ministry of Tourism and Leisure (MINTOUL) 
+signed a landmark partnership agreement at the Hôtel des Députés in 
+Yaoundé. </p>
+                    <a href="https://camtel.cm/news/tourism-meets-digital-camtel-and-mintoul-united" class="inline-flex items-center text-primary hover:text-primary-dark font-medium group">
+                        Read more
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+                
+        <!-- News Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="relative">
+                                        <img src="Camtel%20Site_fichiers/0b4aab70-2fd6-4bcd-a611-7038828ac5f5.jpg" alt="25TH EDITION OF THE CHANTAL BIYA INTERNATIONAL CYCLING GRAND PRIX: CAMTEL ON BOARD! " class="w-full h-64 object-cover">
+                    <div class="absolute top-4 left-4 bg-gray-800 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        News
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>September 15, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">25TH EDITION OF THE CHANTAL BIYA INTERNATIONAL CYCLING GRAND PRIX: CAMTEL ON BOARD! </h3>
+                    <p class="text-gray-600 mb-4">For five intense days,
+ Cameroon came alive to the rhythm of world-class cycling at the 25th 
+edition of the Chantal Biya International Cycling Grand Prix.</p>
+                    <a href="https://camtel.cm/news/25th-edition-of-the-chantal-biya-international-cycling-grand-prix-camtel-on-board" class="inline-flex items-center text-primary hover:text-primary-dark font-medium group">
+                        Read more
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="relative">
+                                        <img src="Camtel%20Site_fichiers/dcfd0cdb-9e19-40cf-ba47-ab7170c829c9.jpg" alt="CAMTEL AT MANKON FOOTBALL TOURNAMENT" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 left-4 bg-gray-800 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        News
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>September 08, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">CAMTEL AT MANKON FOOTBALL TOURNAMENT</h3>
+                    <p class="text-gray-600 mb-4">From July 15 to 
+September 7, 2025, CAMTEL had the honor of sponsoring the 13th Mankon 
+Football Unity Cup &amp; Cultural Jamboree in Bamenda, with activities 
+hosted at the iconic Mankon Palace Market Squares.</p>
+                    <a href="https://camtel.cm/news/camtel-at-mankon-football-tournament" class="inline-flex items-center text-primary hover:text-primary-dark font-medium group">
+                        Read more
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="relative">
+                                        <img src="Camtel%20Site_fichiers/7b7f0356-9349-4938-bbd0-9e3808159866.jpg" alt="CAMTEL WAS AT THE HEART OF THE CHANTAL BIYA SUPER CUP" class="w-full h-64 object-cover">
+                    <div class="absolute top-4 left-4 bg-gray-800 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        News
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 mb-3">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>September 08, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">CAMTEL WAS AT THE HEART OF THE CHANTAL BIYA SUPER CUP</h3>
+                    <p class="text-gray-600 mb-4">From September 1st to 
+7th, 2025, the Paul Biya Multisports Complex in Mvomeka’a, South Region,
+ hosted the Chantal Biya Super Cup. Held under the High Patronage of the
+ First Lady of Cameroon, with the support of CAMTEL as the official 
+sponsor, the event brought together young people around sports and 
+culture.</p>
+                    <a href="https://camtel.cm/news/camtel-was-at-the-heart-of-the-chantal-biya-super-cup" class="inline-flex items-center text-primary hover:text-primary-dark font-medium group">
+                        Read more
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+                    </div>
+                
+        <!-- View All News Button -->
+        <div class="text-center mt-12">
+            <a href="https://camtel.cm/news" class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors duration-300 group">
+                View All News
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>             </div>
+
+    <div data-aos="fade-up" data-aos-delay="600" x-data="{ shown: false }" x-intersect.once="shown = true; setTimeout(()=&gt;window.olUpdate &amp;&amp; window.olUpdate('head-office-map'), 100);" class="aos-init">
+        <style>
+.ol-popup {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ol-popup .popup-closer:hover {
+    color: #333;
+}
+
+#head-office-map {
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 384px; /* h-96 = 384px */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Ensure the map container is visible */
+#head-office-map:empty::before {
+    content: 'Loading OpenLayers map...';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 384px; /* h-96 = 384px */
+    background-color: #f3f4f6;
+    color: #6b7280;
+    font-size: 14px;
+}
+</style>
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Location</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Description Column -->
+            <div class="flex flex-col justify-center space-y-6">
+                <h3 class="text-2xl font-semibold text-gray-800">Camtel Head Office</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Visit our head office in Yaoundé, the capital city 
+of Cameroon. Our modern facility houses our main operations center, 
+customer service department, and technical support teams. We're 
+conveniently located in the heart of the city for easy access.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                        <div>
+                            <span class="text-gray-700 font-medium">Address:</span>
+                            <p class="text-gray-600">Avenue de l'Indépendance, Yaoundé, Cameroon</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-phone text-primary mt-1"></i>
+                        <div>
+                            <span class="text-gray-700 font-medium">Phone:</span>
+                            <p class="text-gray-600">+237 2 22 23 40 65</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-clock text-primary mt-1"></i>
+                        <div>
+                            <span class="text-gray-700 font-medium">Business Hours:</span>
+                            <p class="text-gray-600">Monday to Friday, 8:00 AM to 3:30 PM (GMT+1)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-envelope text-primary mt-1"></i>
+                        <div>
+                            <span class="text-gray-700 font-medium">Email:</span>
+                            <p class="text-gray-600">contact@camtel.cm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <button id="get-directions-btn" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors duration-300 flex items-center">
+                        <i class="fas fa-directions mr-2"></i>
+                        Get Directions
+                    </button>
+                </div>
+            </div>
+            <!-- Map Column -->
+            <div class="w-full h-96">
+                <div id="head-office-map" class="w-full h-full" style="min-height:384px;"><div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 100%; height: 100%; z-index: 0;" class="ol-unselectable ol-layers"><div class="ol-layer" style="position: absolute; width: 100%; height: 100%;"><canvas style="position: absolute; left: 0px; transform-origin: left top 0px; transform: matrix(0.8, 0, 0, 0.8, 0, 0);" width="740" height="480"></canvas></div></div><div style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;" class="ol-overlaycontainer"><div class="ol-overlay-container ol-selectable" style="position: absolute; pointer-events: auto; transform: translate(-50%, -100%) translate(296px, 192px);"><div class="ol-popup" style="position: absolute; background: white; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px; padding: 12px; border-radius: 10px; border: 1px solid rgb(204, 204, 204); bottom: 12px; left: -50px; min-width: 240px; z-index: 1000;"><div class="popup-content"><h3 style="margin:0 0 6px 0;color:#09aeef;font-weight:bold;">Camtel Head Office</h3><p style="margin:0 0 4px 0;font-size:14px;">Avenue de l'Indépendance</p><p style="margin:0;font-size:14px;">Yaoundé, Cameroon</p></div></div></div></div><div style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;" class="ol-overlaycontainer-stopevent"><div style="pointer-events: auto;" class="ol-zoom ol-unselectable ol-control"><button class="ol-zoom-in" type="button" title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">–</button></div><div style="pointer-events: auto;" class="ol-rotate ol-unselectable ol-control ol-hidden"><button class="ol-rotate-reset" type="button" title="Reset rotation"><span class="ol-compass" style="transform: rotate(0rad);">⇧</span></button></div><div style="pointer-events: auto;" class="ol-attribution ol-unselectable ol-control ol-uncollapsible"><button type="button" aria-expanded="true" title="Attributions"><span class="ol-attribution-collapse">›</span></button><ul><li>© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors.</li></ul></div></div></div></div>
+            </div>
+            <link rel="stylesheet" href="Camtel%20Site_fichiers/ol.css">
+            <script src="Camtel%20Site_fichiers/ol.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Coordinates: [longitude, latitude]
+                    var camtelOffice = [11.502075, 3.848033];
+                    // Transform to Web Mercator
+                    var camtelOfficeWebMerc = ol.proj.fromLonLat(camtelOffice);
+
+                    var map = new ol.Map({
+                        target: 'head-office-map',
+                        layers: [
+                            new ol.layer.Tile({
+                                source: new ol.source.OSM()
+                            })
+                        ],
+                        view: new ol.View({
+                            center: camtelOfficeWebMerc,
+                            zoom: 16
+                        })
+                    });
+
+                    // Marker
+                    var marker = new ol.Feature({
+                        geometry: new ol.geom.Point(camtelOfficeWebMerc)
+                    });
+
+                    var markerStyle = new ol.style.Style({
+                        image: new ol.style.Icon({
+                            anchor: [0.5, 1],
+                            src: 'https://cdn.jsdelivr.net/npm/ol@latest/examples/data/icon.png'
+                        })
+                    });
+                    marker.setStyle(markerStyle);
+
+                    var vectorSource = new ol.source.Vector({
+                        features: [marker]
+                    });
+
+                    var markerLayer = new ol.layer.Vector({
+                        source: vectorSource
+                    });
+
+                    map.addLayer(markerLayer);
+
+                    // Popup
+                    var popup = document.createElement('div');
+                    popup.className = 'ol-popup';
+                    popup.style.cssText = 'position:absolute;background:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:12px;border-radius:10px;border:1px solid #ccc;bottom:12px;left:-50px;min-width:240px;z-index:1000;';
+                    popup.innerHTML = '<div class="popup-content"><h3 style="margin:0 0 6px 0;color:#09aeef;font-weight:bold;">Camtel Head Office</h3><p style="margin:0 0 4px 0;font-size:14px;">Avenue de l\&#039;Indépendance</p><p style="margin:0;font-size:14px;">Yaoundé, Cameroon</p></div>';
+
+                    var overlay = new ol.Overlay({
+                        element: popup,
+                        positioning: 'bottom-center',
+                        stopEvent: false
+                    });
+                    map.addOverlay(overlay);
+                    overlay.setPosition(camtelOfficeWebMerc);
+
+                    // Directions button
+                    var btn = document.getElementById('get-directions-btn');
+                    if (btn) {
+                        btn.addEventListener('click', function () {
+                            window.open(`https://www.openstreetmap.org/directions?from=&to=${camtelOffice[1]},${camtelOffice[0]}`, '_blank');
+                        });
+                    }
+                });
+            </script>
+             
+    
+            </div>
+        </div>
+    </section></div>
+
+
+    </main></div>
+
+    <div data-aos="fade-up" data-aos-delay="700" class="aos-init">
+                
+        <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Our Strategic Partners</h2>
+        <p class="text-gray-600 text-center mb-12">Working together to build Cameroon's digital future</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8">
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/1554728087.jpg" alt="MINESUP" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/DGi.png" alt="DGI" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/DGSN.png" alt="DGSN" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/minesec.png" alt="MINSEC" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/minmap.png" alt="MINMAP" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/minrex.png" alt="MINREX" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/minsante.jpg" alt="MINSANTE" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/mintransport.jpg" alt="MINTANS" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/partenaires-2.jpg" alt="TATA" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center justify-center p-1 sm:p-2 md:p-3">    
+                    <img src="Camtel%20Site_fichiers/sonamines.png" alt="SONAMINES" class="block mx-auto object-contain h-12 sm:h-14 md:h-16 w-auto" loading="lazy" onerror="this.src='https://camtel.cm/images/placeholder.png'">
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>             </div>
+
+    <div data-aos="fade-up" data-aos-delay="800" class="aos-init">
+        <section class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">Ready to join the Camtel network?</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://camtel.cm/support#contact-form" class="transform hover:scale-105 transition-transform duration-300">
+                <button type="button" class="inline-flex items-center justify-center font-medium rounded-lg focus:outline-none focus:ring-offset-2 transition-colors duration-200 bg-secondary hover:bg-secondary-dark text-primary focus:ring-secondary border border-primary px-4 py-2 text-base">
+        Contact Us
+</button>             </a>
+        </div>
+    </div>
+</section>     </div>
+        
+
+        <!-- Footer -->
+        <div class="bg-primary-dark text-white ">
+    <!-- Main Footer Content -->
+    <div class="py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Centered Logo Section -->
+            <div class="flex justify-center mb-12">
+                <img src="Camtel%20Site_fichiers/logo.png" alt="Camtel Logo" class="h-16 w-auto">
+            </div>
+            
+            <!-- Footer Sections Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- About CAMTEL Section -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold uppercase tracking-wide mb-4 relative">
+                        About CAMTEL
+                            <span class="hidden md:block absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        CAMTEL (Cameroon Telecommunications) has been 
+Cameroon's incumbent telecommunications operator since 1998.
+                    </p>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold uppercase tracking-wide mb-4 relative">
+                        Quick Links
+                        <span class="hidden md:block absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://camtel.cm/" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>Home
+                        </a></li>
+                        <li><a href="https://camtel.cm/about" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>About Us
+                        </a></li>
+                        <li><a href="https://camtel.cm/documentation" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>Documentation
+                        </a></li>
+                        <li><a href="https://camtel.cm/agencies" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>Agencies
+                        </a></li>
+                        <li><a href="https://camtel.cm/about#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>Contact
+                        </a></li>
+                        <li><a href="https://camtel.cm/services" class="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center justify-center md:justify-start">
+                            <span class="mr-2 text-primary">→</span>Services
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold uppercase tracking-wide mb-4 relative">
+                        Contact
+                        <span class="hidden md:block absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 text-sm">Contact us via</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <span class="mr-2">📞</span>
+                                <span class="text-gray-300 text-sm">+ 237 2 22 23 40 65</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start">
+                                <span class="mr-2">✉️</span>
+                                <a href="mailto:contact@camtel.cm" class="text-white hover:text-blue-300 transition-colors duration-200 text-sm">
+                                    contact@camtel.cm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-semibold uppercase tracking-wide mb-4 relative">
+                        Follow Us
+                        <span class="hidden md:block absolute bottom-0 left-0 w-10 h-0.5 bg-primary"></span>
+                    </h3>
+                    <div class="flex justify-center md:justify-start space-x-3">
+                        <a href="https://www.facebook.com/camtelonline/" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/camtelonline" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="X">
+                            <!-- X (formerly Twitter) logo SVG -->
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.53 3H21.5l-7.19 8.21L22.5 21h-7.19l-5.66-6.47L3.5 21H.5l7.69-8.78L1.5 3h7.19l5.13 5.87L17.53 3zm-2.02 15h2.13L8.47 5.97H6.34L15.51 18z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/camtel-cm/" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCQbkxS6Ky72QW8hAzM--gaA/videos" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="YouTube">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Footer -->
+    <div class="bg-gray-950 border-t border-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 CAMTEL. All rights reserved. | Powered by 
+                    <a href="https://camtel.cm/" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                        CAMTEL Silicon Valley
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 opacity-100 visible">
+    <svg class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            scrollToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+            scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            scrollToTopBtn.classList.remove('opacity-100', 'visible');
+        }
+    });
+    
+    // Smooth scroll to top
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>     
+
+    <!-- Swiper JS -->
+    <script src="Camtel%20Site_fichiers/swiper-bundle.min.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+
+        <script>
+    (function(){
+        const slides = document.querySelectorAll('[data-hero-slide]');
+        if (slides.length > 1) {
+            let idx = 0;
+            setInterval(() => {
+                slides[idx].classList.remove('opacity-100');
+                slides[idx].classList.add('opacity-0');
+                idx = (idx + 1) % slides.length;
+                slides[idx].classList.remove('opacity-0');
+                slides[idx].classList.add('opacity-100');
+            }, 4000);
+        }
+
+        const KEY='hero_ad_seen_at';
+        const now=Date.now();
+        const last=localStorage.getItem(KEY);
+        const dayMs=24*60*60*1000;
+        if(last && (now-parseInt(last,10))<dayMs){
+            return;
+        }
+
+        fetch("https://camtel.cm/api/featured-advert")
+            .then(r=>r.ok?r.json():null)
+            .then(data=>{
+                if(!data || !data.slug){
+                    return;
+                }
+                const modal=document.getElementById('hero-advert-modal');
+                const titleEl=document.getElementById('hero-advert-title');
+                const contentEl=document.getElementById('hero-advert-content');
+                const imgEl=document.getElementById('hero-advert-image');
+                const cta=document.getElementById('hero-advert-cta');
+                const close=document.getElementById('hero-advert-close');
+
+                titleEl.textContent=data.title||'';
+                contentEl.innerHTML=data.description||'';
+                if (data.image) {
+                    imgEl.innerHTML = `<img src="${data.image}" class="w-full h-80 md:h-96 object-cover rounded-2xl" alt="${data.title||'Advert'}">`;
+                    imgEl.style.display = 'block';
+                } else {
+                    imgEl.style.display = 'none';
+                }
+                cta.textContent = data.buttonText || 'View';
+                cta.href = data.url;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                setTimeout(() => {
+                    const backdrop = modal.querySelector('.bg-black\\/60');
+                    const content = modal.querySelector('.bg-white');
+                    if (backdrop) backdrop.style.opacity = '1';
+                    if (content) {
+                        content.style.opacity = '1';
+                        content.style.transform = 'scale(1)';
+                    }
+                }, 10);
+
+                function hide(){ 
+                    const backdrop = modal.querySelector('.bg-black\\/60');
+                    const content = modal.querySelector('.bg-white');
+                    if (backdrop) backdrop.style.opacity = '0';
+                    if (content) {
+                        content.style.opacity = '0';
+                        content.style.transform = 'scale(0.95)';
+                    }
+                    setTimeout(() => {
+                        modal.classList.add('hidden'); 
+                        modal.classList.remove('flex'); 
+                        localStorage.setItem(KEY, String(Date.now())); 
+                        document.body.classList.remove('overflow-hidden');
+                    }, 300);
+                }
+                close.addEventListener('click', hide);
+            }).catch(()=>{});
+    })();
+    </script>
+    <script>
+    // Add marker and popup using the base OL map once ready
+    document.addEventListener('ol:ready', function(e){
+        if (e.detail.id !== 'head-office-map') return;
+        const map = e.detail.map;
+        const camtelOffice = [11.502075, 3.848033];
+        const markerSource = new ol.source.Vector();
+        const markerLayer = new ol.layer.Vector({ source: markerSource });
+        map.addLayer(markerLayer);
+        markerSource.addFeature(new ol.Feature({ geometry: new ol.geom.Point(camtelOffice) }));
+        const popup = document.createElement('div');
+        popup.className = 'ol-popup';
+        popup.style.cssText = 'position:absolute;background:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);padding:12px;border-radius:10px;border:1px solid #ccc;bottom:12px;left:-50px;min-width:240px;z-index:1000;';
+        popup.innerHTML = '<div class="popup-content"><h3 style="margin:0 0 6px 0;color:#09aeef;font-weight:bold;">Camtel Head Office</h3><p style="margin:0 0 4px 0;font-size:14px;">Avenue de l\&#039;Indépendance</p><p style="margin:0;font-size:14px;">Yaoundé, Cameroon</p></div>';
+        const overlay = new ol.Overlay({ element: popup, positioning: 'bottom-center', stopEvent: false });
+        map.addOverlay(overlay);
+        overlay.setPosition(camtelOffice);
+        const btn = document.getElementById('get-directions-btn');
+        if (btn) btn.addEventListener('click', function(){
+            window.open(`https://www.openstreetmap.org/directions?from=&to=${camtelOffice[1]},${camtelOffice[0]}`, '_blank');
+        });
+    });
+    // Nudge the map to reflow when this section animates into view (AOS)
+    (function(){
+        function nudge(){
+            if (window.olUpdate) { window.olUpdate('head-office-map'); }
+        }
+        document.addEventListener('aos:in', nudge);
+        window.addEventListener('scroll', function(){
+            // one-time deferred update after scroll
+            if (!window.__olNudged) { window.__olNudged = true; setTimeout(nudge, 150); }
+        }, { passive: true });
+        // safety updates after load
+        window.addEventListener('load', function(){ setTimeout(nudge, 200); setTimeout(nudge, 800); });
+        // immediate small delay in case AOS is disabled
+        setTimeout(nudge, 250);
+    })();
+</script>
+<script>
+
+</script>
+    <div wire:id="LPwlI2SEzDG9spIktmVZ" class="fixed bottom-4 right-4 z-50 w-auto max-w-[calc(100vw-2rem)]">
+    <!-- Chatbot Toggle Button -->
+    <button wire:click="toggleChat" class="bg-primary text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-primary-dark transition-colors relative">
+        <i class="fas fa-comments text-lg sm:text-xl"></i>
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    </button>
+    
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="hidden bg-white rounded-lg shadow-xl w-80 sm:w-96 h-[500px] sm:h-[600px] flex flex-col mt-3 max-w-[calc(100vw-2rem)]">
+        <!-- Modern Chat Header -->
+        <div class="p-4 border-b bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="relative">
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-robot text-white text-lg"></i>
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white"></div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Camtel Assistant</h3>
+                        <p class="text-sm opacity-90">Support Bot</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button wire:click="startNewChatSession" class="p-2 hover:bg-white/10 rounded-full transition-colors" title="Start Fresh Chat">
+                        🆕
+                    </button>
+                    <button wire:click="toggleChat" class="p-2 hover:bg-white/10 rounded-full transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Messages Area -->
+        <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto bg-gray-50" wire:poll.5s="checkForNewMessages">
+            <!--[if BLOCK]><![endif]-->                <!-- Existing Messages -->
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]-->                        <div class="flex items-start space-x-3 mb-4">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 shadow-sm max-w-[80%]">
+                                Hello, I'm Ngonda, CAMTEL's virtual assistant! 👋<br>
+<br>
+I'm here to help you with all things CAMTEL - from mobile services to internet solutions.
+                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                <!--[if ENDBLOCK]><![endif]-->
+                                <!--[if ENDBLOCK]><![endif]-->
+                                <!--[if ENDBLOCK]><![endif]-->
+                                <!--[if ENDBLOCK]><![endif]-->
+                                <!--[if ENDBLOCK]><![endif]-->
+                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                
+                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            </div>
+                        </div>
+                        
+                        <!-- Show visitor information form when asking for info -->
+                        <!--[if BLOCK]><![endif]-->                            <div class="flex items-start space-x-3 mb-4">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-robot text-white text-sm"></i>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 shadow-sm max-w-[80%]">
+                                    <form wire:submit="submitVisitorInfo" class="space-y-3">
+                                        <div>
+                                            <label for="visitor-name" class="block text-sm font-medium text-gray-700 mb-1">
+                                                Your Full Name *
+                                            </label>
+                                            <input type="text" id="visitor-name" wire:model="formData.name" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" placeholder="Enter your full name" required="">
+                                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                        </div>
+                                        
+                                        <div>
+                                            <label for="visitor-phone" class="block text-sm font-medium text-gray-700 mb-1">
+                                                Your Phone Number *
+                                            </label>
+                                            <input type="tel" id="visitor-phone" wire:model="formData.phone" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" placeholder="Enter your phone number" required="">
+                                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                        </div>
+                                        
+                                        <div class="pt-2">
+                                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                                <i class="fas fa-check mr-2"></i>
+                                                Submit Information
+                                            </button>
+                                        </div>
+                                    </form>
+                                    
+                                    <div class="mt-3 p-2 bg-blue-50 border border-blue-200 rounded-lg">
+                                        <div class="flex items-center text-blue-700 text-xs">
+                                            <i class="fas fa-info-circle mr-2"></i>
+                                            <span>Please fill out the form above to continue. The chat input will appear once you submit your information.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if ENDBLOCK]><![endif]-->
+                <!--[if ENDBLOCK]><![endif]-->
+            <!--[if ENDBLOCK]><![endif]-->
+
+            <!-- Show categorization buttons when appropriate -->
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+        
+        <!-- Chat Input Area -->
+        <div class="p-4 border-t bg-white">
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+            
+            <form wire:submit.prevent="sendMessage" class="flex items-center space-x-2">
+                <div class="flex-1 relative">
+                    <input type="text" id="chatbot-input" wire:model="input" wire:keydown.enter="sendMessage" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" placeholder="Type your message here...">
+
+                    
+                </div>
+                
+                <!-- Send Button -->
+                <button type="submit" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors " wire:loading.attr="disabled" wire:target="attachedFile, uploadFile">
+                    <i class="fas fa-paper-plane text-lg"></i>
+                </button>
+                
+               
+            </form>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+            
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+            <!-- Uploading Indicator -->
+            <div class="mt-2 flex items-center text-xs text-gray-500" wire:loading="" wire:target="attachedFile, uploadFile">
+                <div class="animate-spin rounded-full h-3 w-3 border-b-2 border-blue-600 mr-2"></div>
+                Uploading file...
+            </div>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchVoiceInputBtn = document.getElementById('search-voice-input');
+        const chatInput = document.getElementById('chatbot-input');
+        const messagesContainer = document.getElementById('chatbot-messages');
+        const chatbotContainer = document.querySelector('.fixed.bottom-4.right-4');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const toggleButton = chatbotContainer.querySelector('button[wire\\:click="toggleChat"]');
+
+        // Function to scroll to bottom of messages
+        function scrollToBottom() {
+            if (messagesContainer) {
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+        }
+
+        // Click outside functionality
+        document.addEventListener('click', function(event) {
+            // Check if chatbot is open
+            if (chatbotWindow && chatbotWindow.classList.contains('block')) {
+                // Check if click is outside the chatbot container
+                if (!chatbotContainer.contains(event.target)) {
+                    // Close the chatbot
+                    if (typeof Livewire !== 'undefined') {
+                        Livewire.find(chatbotContainer.closest('[wire\\:id]')?.getAttribute('wire:id')).call('toggleChat');
+                    }
+                }
+            }
+        });
+
+        // Prevent toggle button from closing when clicked (since it's inside the container)
+        if (toggleButton) {
+            toggleButton.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        }
+
+        // Listen for Livewire events
+        Livewire.on('message-sent', () => {
+            setTimeout(scrollToBottom, 100);
+            // Don't clear input field here - let Livewire handle it
+        });
+
+        // Allow other parts of the site to open the chatbot
+        Livewire.on('open-chatbot', () => {
+            const id = chatbotContainer.closest('[wire\\:id]')?.getAttribute('wire:id');
+            if (id) {
+                Livewire.find(id).call('openChat');
+                setTimeout(scrollToBottom, 150);
+            }
+        });
+
+        // Listen for new messages from auto-refresh
+        Livewire.on('new-messages-received', () => {
+            setTimeout(scrollToBottom, 100);
+            // Don't clear input field - let Livewire handle it
+            
+            // Show notification if chat is not focused
+            if (!document.hasFocus()) {
+                showNewMessageNotification();
+            }
+        });
+        
+        // Listen for chat state changes
+        Livewire.on('chat-opened', () => {
+            startAutoRefresh();
+            // Smooth open animation
+            if (chatbotWindow) {
+                chatbotWindow.style.transform = 'scale(0.95)';
+                chatbotWindow.style.opacity = '0';
+                setTimeout(() => {
+                    chatbotWindow.style.transition = 'all 0.3s ease-out';
+                    chatbotWindow.style.transform = 'scale(1)';
+                    chatbotWindow.style.opacity = '1';
+                }, 10);
+            }
+        });
+        
+        Livewire.on('chat-closed', () => {
+            stopAutoRefresh();
+        });
+        
+        // Listen for escalated message updates
+        Livewire.on('escalated-messages-updated', (event) => {
+            // Update the escalated message badge if it exists
+            const badge = document.querySelector('.bg-red-500.text-white.text-xs.rounded-full');
+            if (badge) {
+                badge.textContent = event.count;
+            }
+        });
+
+        // Auto-refresh functionality
+        let autoRefreshInterval;
+        
+        function startAutoRefresh() {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+            }
+            autoRefreshInterval = setInterval(() => {
+                if (chatbotWindow && chatbotWindow.classList.contains('block')) {
+                    // Trigger Livewire refresh
+                    if (typeof Livewire !== 'undefined') {
+                        const id = chatbotContainer.closest('[wire\\:id]')?.getAttribute('wire\\:id');
+                        if (id) {
+                            Livewire.find(id).call('checkForNewMessages');
+                        }
+                    }
+                }
+            }, 5000); // Check every 5 seconds
+        }
+        
+        function stopAutoRefresh() {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+                autoRefreshInterval = null;
+            }
+        }
+
+        // New message notification
+        function showNewMessageNotification() {
+            if (Notification.permission === 'granted') {
+                new Notification('CAMTEL Assistant', {
+                    body: 'You have a new message',
+                    icon: '/favicon.ico'
+                });
+            }
+        }
+
+        // Request notification permission
+        if (Notification.permission === 'default') {
+            Notification.requestPermission();
+        }
+
+        // Handle Enter key in chat input
+        if (chatInput) {
+            chatInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    
+                    // Check if chat is escalated
+                    const isEscalated = document.querySelector('.bg-blue-50') !== null;
+                    const allowContinuedConversation = document.querySelector('.bg-blue-50 .text-xs')?.textContent.includes('you can continue typing');
+                    
+                    if (isEscalated && !allowContinuedConversation) {
+                        return; // Don't submit if escalated and continued conversation not allowed
+                    }
+                    
+                    const form = chatInput.closest('form');
+                    if (form) {
+                        form.dispatchEvent(new Event('submit', { bubbles: true }));
+                    }
+                }
+            });
+        }
+
+        // Handle form submission to clear input
+        const chatForm = document.querySelector('form[wire\\:submit="sendMessage"]');
+        if (chatForm) {
+            chatForm.addEventListener('submit', (e) => {
+                // Clear input field IMMEDIATELY after form submission
+                if (chatInput) {
+                    chatInput.value = '';
+                    // Trigger Livewire input update
+                    chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                }
+                
+                // Call the global clear function
+                if (window.clearChatInput) {
+                    window.clearChatInput();
+                }
+                
+                // Additional clearing with multiple timeouts for reliability
+                setTimeout(() => {
+                    if (chatInput) {
+                        chatInput.value = '';
+                        chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }, 10);
+                
+                setTimeout(() => {
+                    if (chatInput) {
+                        chatInput.value = '';
+                        chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }, 50);
+                
+                setTimeout(() => {
+                    if (chatInput) {
+                        chatInput.value = '';
+                        chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }, 100);
+            });
+        }
+
+        // Initial scroll to bottom
+        scrollToBottom();
+
+        // Listen for Livewire updates and force clear input
+        Livewire.on('$refresh', () => {
+            // Force clear input after any Livewire refresh
+            setTimeout(() => {
+                const chatInput = document.getElementById('chatbot-input');
+                if (chatInput) {
+                    chatInput.value = '';
+                    chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    console.log('Input cleared on $refresh event');
+                }
+            }, 10);
+        });
+
+        // Listen for Livewire component updates
+        Livewire.on('$updated', () => {
+            // Force clear input after component updates
+            setTimeout(() => {
+                const chatInput = document.getElementById('chatbot-input');
+                if (chatInput) {
+                    chatInput.value = '';
+                    chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    console.log('Input cleared on $updated event');
+                }
+            }, 10);
+        });
+
+        // Listen for any Livewire event and clear input
+        Livewire.on('*', () => {
+            // Clear input on any Livewire event
+            setTimeout(() => {
+                const chatInput = document.getElementById('chatbot-input');
+                if (chatInput) {
+                    chatInput.value = '';
+                    chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+                }
+            }, 5);
+        });
+    });
+</script>
+    <!-- Chatbot Event Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function(e) {
+                if (
+                    e.target.matches('[data-action="open-chatbot"]') ||
+                    (e.target.closest('a') && e.target.closest('a').getAttribute('onclick') &&
+                        e.target.closest('a').getAttribute('onclick').includes('open-chatbot'))
+                ) {
+                    e.preventDefault();
+                    if (typeof Livewire !== 'undefined') {
+                        Livewire.dispatch('open-chatbot');
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Livewire Scripts -->
+    <script src="Camtel%20Site_fichiers/livewire.min.js" data-csrf="7q3CO1MT9VO4OFXvkrH23oUYqtCdaycj3A5s5ddC" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+
+</body></html>

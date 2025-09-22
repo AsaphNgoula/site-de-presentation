@@ -40,7 +40,7 @@ header{
     border:none;
     border-radius: 4px;
     cursor: pointer;
-    background-color:  rgb(0, 91, 172);
+    background-color:  rgb(125, 187, 241);
 ;
 
 } 
@@ -180,11 +180,23 @@ nav a:active:{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.welcome{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.sectext{
+    position: relative;
+    top: -120px;
+}
 .text-sui{
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    position: relative;
+    top: -150px;
+
 
 }
 
@@ -196,7 +208,8 @@ nav a:active:{
     width: 150px;
     height: 40px;
     border-radius: 10px;
-
+    justify-content: center;
+    align-content: center;
     
 }
 
@@ -210,4 +223,104 @@ nav a:active:{
     border-radius: 10px;
     color: #3aa0e5;
     font-weight: 100;
+    align-content: center;
+}
+
+.text-about{
+    width: 600px;
+    padding-left: 200px;
+}
+
+.aboutUs{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.paragraphe-about-us{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 50;
+        line-height: 1.5;
+}
+
+.premierca{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 115px;
+    margin-bottom:20px;    
+}
+
+.deuxiemeca{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 115px;
+    
+}
+.employes{
+    text-align: center;
+    background-color:rgba(242, 242, 242, 0.5);
+    border-radius: 5px;
+    width: 280px;
+    height: 80%;
+    padding-top: -10px;
+}
+
+.certified{
+    text-align: center;
+    background-color:rgba(242, 242, 242, 0.5);
+    border-radius: 5px;
+    width: 280px;
+    height: 80%;
+    padding-top: -10px;
+}
+
+.region{
+   text-align: center;
+    background-color:rgba(242, 242, 242, 0.5);
+    border-radius: 5px;
+    width: 280px;
+    height: 80%;
+    padding-top: -10px;
+}
+
+.year{
+   text-align: center;
+    background-color:rgba(242, 242, 242, 0.5);
+    border-radius: 5px;
+    width: 280px;
+    height: 80%;
+    padding-top: -10px;
+}
+
+.trois{
+    font-size: 30px;
+    font-weight: bold;
+    color: #65b3e8;
+    margin-bottom: -9px;
+    align-content: center;
+}
+
+    
+
+.iso{
+    font-size: 30px;
+    font-weight: bold;
+    color: #65b3e8; 
+}
+
+.dix{
+    font-size: 30px;
+    font-weight: bold;
+    color: #65b3e8; 
+}
+.deux{
+    font-size: 30px;
+    font-weight: bold;
+    color: #65b3e8; 
+}
+
+.neuf{
+
 }
