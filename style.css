@@ -40,7 +40,9 @@ header{
     border:none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: rgb(97, 97, 231);
+    background-color:  rgb(0, 91, 172);
+;
+
 } 
 
 /*le boutton agencies*/
@@ -60,4 +62,152 @@ header{
     border-radius: 4px;
     cursor: pointer;
     background-color: none;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 10px 0px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+nav ul{
+    margin:0px;
+    padding: 0px;
+}
+
+nav li{
+    list-style-type: none;
+    float: left;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 0px 15px;
+    padding: 5px 10px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+}
+
+nav a:hover{
+    color:#0056b3;
+}
+
+nav a:active:{
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.table{
+    display: table;
+    margin: 5px auto;
+}
+
+
+.ho:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.about:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.service:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.news:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+ 
+.support:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.career:hover{
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.affichage_femme{
+    width: 1700px;
+    height: 900px;
+}
+.container{
+    position:relative;
+    width: 1600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.background-image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url("images/femme.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+   .text-camtel {
+    position: relative;
+    z-index: 2;
+    color:white;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-sui{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.discover{
+    z-index: 3;
+    margin:40px 30px;
+    padding:5px;
+    background-color: #65b3e8;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+
+    
+}
+
+.contact{
+     z-index: 3;
+    margin:40px 30px;
+    padding:5px ;
+    background-color:white;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    color: #3aa0e5;
+    font-weight: 100;
 }
