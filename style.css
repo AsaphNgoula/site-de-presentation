@@ -1276,15 +1276,15 @@ li{
     }
 
     .debut{
-        text-align: center;
-        position: relative;
+       position: relative;
         left: 300px;
-        bottom: 50px;
+        bottom: -530px;    
     }
 
     .text-camtel {
         font-size: 1.5em;
-        padding-top: 0px;
+        padding-top: -30px;
+
     }
 
     .discover, .contact {
